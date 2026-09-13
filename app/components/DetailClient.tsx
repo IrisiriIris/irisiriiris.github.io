@@ -1,0 +1,54 @@
+"use client";
+
+import { entries, sections, text, type PortfolioEntry } from "../content";
+import { useLanguage } from "../useLanguage";
+import { SiteHeader } from "./SiteHeader";
+
+export function DetailClient({ entry }: { entry: PortfolioEntry }) {
+  const { language, setLanguage } = useLanguage();
+  const zh = language === "zh";
+  const section = sections.find((item) => item.id === entry.section)!;
+  const index = entries.findIndex((item) => item.slug === entry.slug);
+  const next = entries[(index + 1) % entries.length];
+
+  return (
+    <main>
+      <SiteHeader language={language} setLanguage={setLanguage} />
+      <article className="detail-page">
+        <div className="breadcrumbs">
+          <a href={`/?lang=${language}&section=${entry.section}#work`}>{zh ? "作品集" : "Portfolio"}</a>
+          <span>/</span><span>{text(section.label, language)}</span>
+        </div>
+        <header className="detail-hero">
+          <div>
+            <p className="eyebrow">{entry.year} · {text(entry.subtitle, language)}</p>
+            <h1>{text(entry.title, language)}</h1>
+          </div>
+          <p className="detail-summary">{text(entry.summary, language)}</p>
+        </header>
+        <div className="detail-tags">{entry.tags.map((tag) => <span key={tag.en}>{text(tag, language)}</span>)}</div>
+
+        <div className="detail-body">
+          <aside>
+            <p className="panel-label">{zh ? "页面结构" : "Page structure"}</p>
+            <p>{zh ? "此页为内容模板。之后可加入图片、图表、论文链接或下载文件。" : "This is a content template. Images, figures, paper links, and downloads can be added later."}</p>
+          </aside>
+          <div className="detail-sections">
+            {entry.detail.map((section, i) => (
+              <section key={section.heading.en}>
+                <span>0{i + 1}</span>
+                <div><h2>{text(section.heading, language)}</h2><p>{text(section.body, language)}</p></div>
+              </section>
+            ))}
+          </div>
+        </div>
+      </article>
+
+      <a className="next-entry" href={`/portfolio/${next.slug}?lang=${language}`}>
+        <span>{zh ? "下一个条目" : "Next entry"}</span>
+        <strong>{text(next.title, language)}</strong>
+        <i aria-hidden="true">→</i>
+      </a>
+    </main>
+  );
+}

@@ -84,9 +84,17 @@ footer div p, footer > p { margin: 10px 0 0; color: #aeb7c7; font-size: 12px; }
 .detail-hero h1 { max-width: 900px; margin: 16px 0 0; font-family: Georgia, serif; font-size: clamp(52px, 8vw, 110px); line-height: .95; letter-spacing: -.05em; font-weight: 400; }
 .detail-summary { margin: 0; color: var(--muted); line-height: 1.7; }
 .detail-tags { margin: 20px 0 0 auto; justify-content: flex-end; }
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 54px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.metric { min-height: 160px; padding: 28px 24px; border-right: 1px solid var(--line); }
+.metric:last-child { border-right: 0; }
+.metric strong { display: block; font-family: Georgia, serif; font-size: clamp(38px, 5vw, 68px); font-weight: 400; letter-spacing: -.04em; color: var(--accent); }
+.metric span { display: block; max-width: 190px; margin-top: 12px; color: var(--muted); font-size: 11px; line-height: 1.5; letter-spacing: .1em; text-transform: uppercase; }
 .detail-body { display: grid; grid-template-columns: .75fr 2fr; gap: 6vw; padding-top: 92px; }
 .detail-body aside { align-self: start; position: sticky; top: 112px; }
-.detail-body aside > p:last-child { max-width: 280px; color: var(--muted); line-height: 1.65; }
+.detail-body aside > p:not(.panel-label) { max-width: 280px; color: var(--muted); line-height: 1.65; }
+.detail-links { display: grid; gap: 10px; max-width: 280px; margin-top: 28px; }
+.detail-links a { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid var(--line); color: var(--ink); font-size: 12px; line-height: 1.4; }
+.detail-links a:hover, .detail-links a:focus-visible { color: var(--accent); }
 .detail-sections { border-top: 1px solid var(--ink); }
 .detail-sections section { display: grid; grid-template-columns: 48px 1fr; gap: 24px; padding: 34px 0 60px; border-bottom: 1px solid var(--line); }
 .detail-sections section > span { color: var(--accent); font-size: 11px; }
@@ -111,6 +119,9 @@ footer div p, footer > p { margin: 10px 0 0; color: #aeb7c7; font-size: 12px; }
   .entry-card { grid-template-columns: 28px 1fr 24px; gap: 10px; }
   .detail-hero { padding-top: 8vh; }
   .detail-tags { justify-content: flex-start; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .metric { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .metric:last-child { border-bottom: 0; }
   .next-entry { grid-template-columns: 1fr auto; }
   .next-entry span { grid-column: 1 / -1; }
   footer { align-items: flex-start; flex-direction: column; }

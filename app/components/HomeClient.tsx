@@ -33,7 +33,7 @@ export function HomeClient() {
         <p className="eyebrow">{zh ? "神经科学 · 生理学 · 精准医学" : "NEUROSCIENCE · PHYSIOLOGY · PRECISION MEDICINE"}</p>
         <h1>{zh ? <>冯舒扬<br /><em>探索复杂生命系统。</em></> : <>Iris Feng<br /><em>Exploring complex living systems.</em></>}</h1>
         <div className="hero-bottom">
-          <p>{zh ? "这是一个记录研究、学习与实践的双语学术作品集。当前版本专注于信息结构，内容将逐步完善。" : "A bilingual academic portfolio spanning research, learning, and practice. This first version establishes the structure for content to come."}</p>
+          <p>{zh ? "这是一个记录研究、学习与实践的双语学术作品集，关注生理信号、临床研究与医疗技术的转化。" : "A bilingual academic portfolio connecting physiological signals, clinical research, and the translation of health technology."}</p>
           <a href="#work">{zh ? "浏览作品" : "Explore portfolio"} <span>↓</span></a>
         </div>
       </section>
@@ -74,7 +74,7 @@ export function HomeClient() {
 
       <footer>
         <div><span className="wordmark">IF<span>.</span></span><p>{zh ? "学术与专业作品集" : "Academic & professional portfolio"}</p></div>
-        <p>{zh ? "内容结构版本 · 2026" : "Structure edition · 2026"}</p>
+        <p>{zh ? "作品集 · 2026" : "Portfolio · 2026"}</p>
       </footer>
     </main>
   );

@@ -28,10 +28,28 @@ export function DetailClient({ entry }: { entry: PortfolioEntry }) {
         </header>
         <div className="detail-tags">{entry.tags.map((tag) => <span key={tag.en}>{text(tag, language)}</span>)}</div>
 
+        {entry.metrics && (
+          <div className="metric-grid">
+            {entry.metrics.map((metric) => (
+              <div className="metric" key={`${metric.value}-${metric.label.en}`}>
+                <strong>{metric.value}</strong>
+                <span>{text(metric.label, language)}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
         <div className="detail-body">
           <aside>
-            <p className="panel-label">{zh ? "页面结构" : "Page structure"}</p>
-            <p>{zh ? "此页为内容模板。之后可加入图片、图表、论文链接或下载文件。" : "This is a content template. Images, figures, paper links, and downloads can be added later."}</p>
+            <p className="panel-label">{zh ? "项目定位" : "Project note"}</p>
+            <p>{entry.aside ? text(entry.aside, language) : (zh ? "本页概括项目背景、承担工作、方法与成果。" : "This page summarises the context, contribution, methods, and outcome.")}</p>
+            {entry.links && (
+              <div className="detail-links">
+                {entry.links.map((link) => (
+                  <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{text(link.label, language)} <span aria-hidden="true">↗</span></a>
+                ))}
+              </div>
+            )}
           </aside>
           <div className="detail-sections">
             {entry.detail.map((section, i) => (

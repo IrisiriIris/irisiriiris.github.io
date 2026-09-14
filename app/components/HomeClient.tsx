@@ -30,10 +30,8 @@ export function HomeClient() {
     <main>
       <SiteHeader language={language} setLanguage={setLanguage} active={active} onSection={chooseSection} />
       <section className="hero" id="top">
-        <p className="eyebrow">{zh ? "神经科学 · 生理学 · 精准医学" : "NEUROSCIENCE · PHYSIOLOGY · PRECISION MEDICINE"}</p>
-        <h1>{zh ? <>冯舒扬<br /><em>探索复杂生命系统。</em></> : <>Iris Feng<br /><em>Exploring complex living systems.</em></>}</h1>
+        <h1>Portfolio</h1>
         <div className="hero-bottom">
-          <p>{zh ? "这是一个记录研究、学习与实践的双语学术作品集，关注生理信号、临床研究与医疗技术的转化。" : "A bilingual academic portfolio connecting physiological signals, clinical research, and the translation of health technology."}</p>
           <a href="#work">{zh ? "浏览作品" : "Explore portfolio"} <span>↓</span></a>
         </div>
       </section>

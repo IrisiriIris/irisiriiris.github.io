@@ -22,7 +22,7 @@ export function DetailClient({ entry }: { entry: PortfolioEntry }) {
         <header className="detail-hero">
           <div>
             <p className="eyebrow">{entry.year} · {text(entry.subtitle, language)}</p>
-            <h1>{text(entry.title, language)}</h1>
+            <h1 className={zh ? "zh-title" : undefined}>{text(entry.title, language)}</h1>
           </div>
           <p className="detail-summary">{text(entry.summary, language)}</p>
         </header>
@@ -35,6 +35,19 @@ export function DetailClient({ entry }: { entry: PortfolioEntry }) {
                 <strong>{metric.value}</strong>
                 <span>{text(metric.label, language)}</span>
               </div>
+            ))}
+          </div>
+        )}
+
+        {entry.media && (
+          <div className={`media-grid ${entry.media.length === 1 ? "single" : ""}`}>
+            {entry.media.map((item) => (
+              <figure key={item.src} className={item.contain ? "contain" : undefined}>
+                <a href={item.src} target="_blank" rel="noreferrer" aria-label={zh ? "打开大图" : "Open full-size image"}>
+                  <img src={item.src} alt={text(item.alt, language)} />
+                </a>
+                <figcaption>{text(item.caption, language)}</figcaption>
+              </figure>
             ))}
           </div>
         )}

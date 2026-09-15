@@ -259,7 +259,9 @@ export const entries: PortfolioEntry[] = [
       { label: { en: "Award information", zh: "奖项介绍" }, href: "https://www.physoc.org/grants-and-prizes/prizes/the-rob-clarke-awards/" },
     ],
     media: [
-      { src: "/images/rob-clarke-poster.jpg", alt: { en: "Rob Clarke Award research poster on oxygen-saturation variability", zh: "Rob Clarke 获奖研究海报：血氧饱和度变异性" }, caption: { en: "The research poster presented at The Physiological Society's 2025 Member Forum.", zh: "在英国生理学会 2025 Member Forum 展示的研究海报。" }, contain: true },
+      { src: "/images/rob-clarke-poster-presentation.jpg", alt: { en: "Iris Feng beside her Rob Clarke Award poster at the Royal Society of Medicine", zh: "Iris Feng 在英国皇家医学会与 Rob Clarke 获奖海报合影" }, caption: { en: "Presenting the oxygen-saturation study at The Physiological Society's 2025 Member Forum at the Royal Society of Medicine.", zh: "在英国皇家医学会举行的英国生理学会 2025 Member Forum 展示血氧动态研究。" }, contain: true },
+      { src: "/images/rob-clarke-discussion.jpg", alt: { en: "Iris Feng discussing her research with delegates at the poster session", zh: "Iris Feng 在海报交流环节与参会者讨论研究" }, caption: { en: "Discussing the directional entropy framework and its clinical interpretation with fellow delegates.", zh: "在海报交流环节与参会者讨论方向性熵分析框架及其临床解释。" }, contain: true },
+      { src: "/images/rob-clarke-award-photo.jpg", alt: { en: "Iris Feng receiving the Rob Clarke Award certificate", zh: "Iris Feng 获颁 Rob Clarke Award 证书" }, caption: { en: "Receiving the Rob Clarke Award at the Society's 150th-anniversary Member Forum.", zh: "在英国生理学会 150 周年 Member Forum 获颁 Rob Clarke Award。" }, contain: true, wide: true },
     ],
     detail: [
       { heading: { en: "Recognition", zh: "获奖说明" }, body: { en: "The Rob Clarke Awards recognise excellence in undergraduate physiology projects, including the student's ability to frame a hypothesis-driven project and show data collection and analytical skill. My abstract was one of 11 selected nationally for poster presentation and final judging.", zh: "Rob Clarke Awards 用于表彰优秀的本科生理学项目，重视学生是否能清楚呈现假设驱动的研究，以及数据采集与分析能力。我的摘要入选当年全英 11 项获奖作品，并进入现场海报展示与终评。" } },

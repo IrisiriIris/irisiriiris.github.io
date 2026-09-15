@@ -30,8 +30,15 @@ export function HomeClient() {
     <main>
       <SiteHeader language={language} setLanguage={setLanguage} active={active} onSection={chooseSection} />
       <section className="hero" id="top">
-        <h1>Portfolio</h1>
+        <div className="hero-main">
+          <p className="eyebrow">{zh ? "冯舒扬 · IRIS FENG" : "IRIS SHUYANG FENG"}</p>
+          <h1>Portfolio</h1>
+        </div>
         <div className="hero-bottom">
+          <div className="hero-intro">
+            <p>{zh ? "记录我在医学科学、临床研究与技术转化中的学习、科研与专业实践。" : "Selected work across medical science, clinical research, and healthcare translation."}</p>
+            <span>{zh ? "教育 · 科研 · 实践 · 论文 · 获奖" : "Education · Research · Experience · Publications · Awards"}</span>
+          </div>
           <a href="#work">{zh ? "浏览作品" : "Explore portfolio"} <span>↓</span></a>
         </div>
       </section>

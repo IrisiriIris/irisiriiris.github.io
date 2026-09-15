@@ -72,10 +72,6 @@ export const entries: PortfolioEntry[] = [
       { value: "Top 5%", label: { en: "of the programme", zh: "专业排名" } },
       { value: "41", label: { en: "school pupils mentored", zh: "名中学生获指导" } },
     ],
-    links: [
-      { label: { en: "Student Ambassador portfolio entry", zh: "学生大使旧版作品集" }, href: "https://reflect.ucl.ac.uk/ims-portfolio-22-23-iris-feng/coursework-showcase/fms-student-ambassador/" },
-      { label: { en: "LinkedIn profile", zh: "LinkedIn 主页" }, href: "https://www.linkedin.com/in/iris-shuyang-feng" },
-    ],
     detail: [
       { heading: { en: "Integrated medical science", zh: "整合医学基础" }, body: { en: "Core study connected cardiovascular and respiratory physiology, liver and drug metabolism, renal and endocrine regulation, infection and inflammation, anatomy and imaging, molecular disease, pharmacology, and cell biology.", zh: "核心课程将心血管与呼吸生理、肝脏与药物代谢、肾脏与内分泌调控、感染与炎症、解剖与影像、疾病分子基础、药理学及细胞生物学贯通起来。" } },
       { heading: { en: "Selected advanced study", zh: "进阶课程" }, body: { en: "Selected modules included neurological disease, biological rhythms, clinical trials, bioinformatics, advanced bacteriology, mind–brain processes, regulatory affairs, and the relationship between bioscience, public engagement, policy, and funding.", zh: "进阶学习包括神经系统与神经疾病、生物节律、临床试验、生物信息学、高级医学细菌学、心理与脑过程、医疗监管，以及生物科学与公众参与、政策和资助之间的关系。" } },
@@ -156,7 +152,6 @@ export const entries: PortfolioEntry[] = [
     subtitle: { en: "HaploX Biotechnology · Internship", zh: "HaploX 生物科技 · 实习" },
     summary: { en: "Translated genetics and precision-medicine topics into concise, public-facing Chinese articles and narrated visual content.", zh: "将遗传学与精准医学主题转化为简洁、面向公众的中文文章及图文讲解内容。" },
     tags: [{ en: "Science communication", zh: "科学传播" }, { en: "Genomics", zh: "基因组学" }, { en: "Video production", zh: "视频制作" }],
-    links: [{ label: { en: "Earlier portfolio entry", zh: "旧版作品集详情" }, href: "https://reflect.ucl.ac.uk/ims-portfolio-22-23-iris-feng/coursework-showcase/haplox-biotechnology/" }],
     detail: [
       { heading: { en: "From source material to story", zh: "从资料到内容" }, body: { en: "I began by researching gene-related source material and translating it into accessible Chinese, then progressed to selecting topics, writing scripts, and producing short-form videos with editing and voice-over. Subjects ranged from inherited and neurodegenerative disorders to circadian, metabolic, and exercise-related genetics.", zh: "我最初负责检索基因相关资料并转化为易懂中文，随后逐步独立承担选题、脚本撰写及短视频剪辑与配音。内容涵盖遗传病与神经退行性疾病，也包括昼夜节律、代谢及运动相关基因。" } },
       { heading: { en: "What the work developed", zh: "能力积累" }, body: { en: "The internship strengthened evidence selection, audience-aware medical writing, visual explanation, and editorial judgement: deciding what detail is necessary for accuracy, and what can be removed so a non-specialist can follow the core idea.", zh: "这段经历强化了证据筛选、面向不同受众的医学写作、视觉化解释与编辑判断：既保留保证准确性所需的信息，也删去阻碍非专业读者理解的细节。" } },
@@ -169,16 +164,16 @@ export const entries: PortfolioEntry[] = [
     year: "2023 — 2024",
     title: { en: "Curriculum innovation project lead", zh: "课程创新项目负责人" },
     subtitle: { en: "UCL ChangeMakers", zh: "UCL ChangeMakers" },
-    summary: { en: "Initiated and led a student–staff project that reframed exam support as interactive case-based learning designed to prompt curiosity and critical thinking.", zh: "发起并领导学生—教师协作项目，将“应试支持”重新设计为激发好奇心与批判性思维的互动案例学习。" },
+    summary: { en: "Secured a £1,300 UCL ChangeMakers grant and led a student–staff project that reframed exam support as interactive case-based learning designed to prompt curiosity and critical thinking.", zh: "获得 UCL ChangeMakers £1,300 项目资助并领导学生—教师协作项目，将“应试支持”重新设计为激发好奇心与批判性思维的互动案例学习。" },
     tags: [{ en: "Project leadership", zh: "项目领导" }, { en: "Learning design", zh: "学习设计" }, { en: "Stakeholder engagement", zh: "多方协作" }],
     metrics: [
+      { value: "£1,300", label: { en: "UCL ChangeMakers grant", zh: "UCL ChangeMakers 项目资助" } },
       { value: "12", label: { en: "interactive learning cases", zh: "个互动学习案例" } },
       { value: "≈2,900", label: { en: "faculty-wide student audience", zh: "名院系潜在学生受众" } },
     ],
-    links: [{ label: { en: "Earlier portfolio entry", zh: "旧版作品集详情" }, href: "https://reflect.ucl.ac.uk/ims-portfolio-22-23-iris-feng/coursework-showcase/ucl-changemakers-project-leader/" }],
     detail: [
       { heading: { en: "Reframing the brief", zh: "重新定义问题" }, body: { en: "The project began as an attempt to improve exam preparation in Applied Medical Sciences. Through discussion with students and teaching staff, I shifted the goal from rehearsing assessment to creating clinically grounded activities that could reveal neglected topics and encourage deeper inquiry.", zh: "项目最初旨在改善应用医学科学学生的考试准备。通过与学生及教师讨论，我把目标从重复应试训练转向具有临床情境的互动活动，用案例补足易被忽视的主题，并鼓励更深入的追问。" } },
-      { heading: { en: "Delivery", zh: "项目实施" }, body: { en: "I coordinated a student collaborator, academic staff, programme administrators, the ChangeMakers team, and the incoming module lead. We translated learning needs into 12 H5P-style interactive cases spanning neuroscience and clinical mechanisms, with a route into future teaching materials.", zh: "我协调学生合作者、教师、项目行政人员、ChangeMakers 团队及下一年度课程负责人，把学习需求转化为 12 个 H5P 互动案例，覆盖神经科学与临床机制，并为后续纳入教学资源建立路径。" } },
+      { heading: { en: "Delivery", zh: "项目实施" }, body: { en: "After securing £1,300 in funding from UCL ChangeMakers, I coordinated a student collaborator, academic staff, programme administrators, the ChangeMakers team, and the incoming module lead. We translated learning needs into 12 H5P-style interactive cases spanning neuroscience and clinical mechanisms, with a route into future teaching materials.", zh: "获得 UCL ChangeMakers £1,300 资助后，我协调学生合作者、教师、项目行政人员、ChangeMakers 团队及下一年度课程负责人，把学习需求转化为 12 个 H5P 互动案例，覆盖神经科学与临床机制，并为后续纳入教学资源建立路径。" } },
       { heading: { en: "What I learned", zh: "项目收获" }, body: { en: "The work required scope-setting, stakeholder alignment, feedback synthesis, content quality control, and handover planning. It also changed how I evaluate educational impact: not only by short-term performance, but by whether a resource helps students ask better questions.", zh: "项目要求我完成范围界定、多方目标协调、反馈整合、内容质量控制及交接规划，也改变了我对教育影响的判断：不仅看短期成绩，更看资源能否帮助学生提出更好的问题。" } },
     ],
   },
@@ -241,9 +236,11 @@ export const entries: PortfolioEntry[] = [
     subtitle: { en: "UCL Faculty of Medical Sciences", zh: "UCL 医学科学学院" },
     summary: { en: "A four-person team analysed a complex clinical case, connected symptoms and test results to underlying mechanisms, and communicated a coherent differential diagnosis.", zh: "四人团队分析复杂临床病例，将症状和检验结果与病理生理机制相连，并完整呈现鉴别诊断过程。" },
     tags: [{ en: "Clinical reasoning", zh: "临床推理" }, { en: "Teamwork", zh: "团队协作" }, { en: "Visual explanation", zh: "可视化表达" }],
-    links: [{ label: { en: "Earlier portfolio entry", zh: "旧版作品集详情" }, href: "https://reflect.ucl.ac.uk/ims-portfolio-22-23-iris-feng/awards/ucl-pbl-competition-first-prize/" }],
     media: [
-      { src: "/images/pbl-wilson-disease-map.jpg", alt: { en: "Integrated mechanism map for a problem-based learning case on Wilson disease", zh: "Wilson 病问题导向学习病例的整合机制图" }, caption: { en: "Our mechanism map connected ATP7B-related copper handling with hepatic, neurological, renal, and systemic consequences.", zh: "团队机制图将 ATP7B 相关铜代谢异常与肝脏、神经、肾脏及全身表现连接起来。" }, contain: true },
+      { src: "/images/pbl-award-team.jpg", alt: { en: "The four-person PBL award team outside UCL Medical School", zh: "四人 PBL 获奖团队在 UCL Medical School 外合影" }, caption: { en: "Our four-person team after receiving the PBL Capstone Competition award at the Royal Free Campus.", zh: "四人团队在 Royal Free Campus 获得 PBL 综合项目竞赛奖项后合影。" }, contain: true },
+      { src: "/images/pbl-wilson-brain.png", alt: { en: "Wilson disease brain mechanism map", zh: "Wilson 病脑部机制图" }, caption: { en: "The neurological branch linked copper accumulation with neurotransmission, inflammation, hepatic encephalopathy, and clinical signs.", zh: "脑部机制分支将铜蓄积与神经递质、炎症、肝性脑病及临床表现联系起来。" }, contain: true },
+      { src: "/images/pbl-wilson-kidney.png", alt: { en: "Wilson disease kidney mechanism map", zh: "Wilson 病肾脏机制图" }, caption: { en: "The renal branch integrated tubular injury, fluid balance, cirrhosis, and haemodynamic consequences.", zh: "肾脏机制分支整合了肾小管损伤、体液平衡、肝硬化及血流动力学后果。" }, contain: true },
+      { src: "/images/pbl-wilson-liver.png", alt: { en: "Wilson disease liver mechanism map", zh: "Wilson 病肝脏机制图" }, caption: { en: "The hepatic branch followed ATP7B dysfunction from copper accumulation to inflammation, cirrhosis, and systemic complications.", zh: "肝脏机制分支从 ATP7B 功能异常出发，追踪铜蓄积、炎症、肝硬化及全身并发症。" }, contain: true },
     ],
     detail: [
       { heading: { en: "The challenge", zh: "任务" }, body: { en: "Given a patient's history, symptoms, and assay results, our four-person team had to identify the diagnosis and explain how apparently separate findings fitted together. We clarified unfamiliar terms, set shared learning objectives, researched alternatives, and repeatedly tested the logic of the case.", zh: "面对患者病史、症状及检验结果，四人团队需要判断诊断，并解释看似分散的发现如何相互关联。我们先澄清陌生概念、制定共同学习目标，再检索不同可能性并反复检验病例逻辑。" } },

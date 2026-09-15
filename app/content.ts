@@ -11,7 +11,7 @@ export type PortfolioEntry = {
   summary: LocalizedText;
   tags: LocalizedText[];
   metrics?: { value: string; label: LocalizedText }[];
-  media?: { src: string; alt: LocalizedText; caption: LocalizedText; contain?: boolean }[];
+  media?: { src: string; alt: LocalizedText; caption: LocalizedText; contain?: boolean; wide?: boolean }[];
   links?: { label: LocalizedText; href: string }[];
   aside?: LocalizedText;
   detail: { heading: LocalizedText; body: LocalizedText }[];
@@ -94,6 +94,11 @@ export const entries: PortfolioEntry[] = [
       { value: "95.7%", label: { en: "early-recovery recordings usable", zh: "早期恢复期记录可用" } },
       { value: "82.0", label: { en: "mean usability score", zh: "平均系统可用性评分" } },
     ],
+    media: [
+      { src: "/images/cardiac-patch-placement.png", alt: { en: "Participant-held patch at tricuspid and mitral recording locations", zh: "受试者在三尖瓣区与二尖瓣区手持贴片采集" }, caption: { en: "The participant-held Biophonics Patch 2 was evaluated at tricuspid and mitral recording locations.", zh: "研究评估受试者在三尖瓣区和二尖瓣区手持 Biophonics Patch 2 的采集方式。" }, contain: true },
+      { src: "/images/cardiac-study-timeline.png", alt: { en: "Study timeline from rest through exercise and recovery", zh: "从静息、运动到恢复期的研究流程时间线" }, caption: { en: "Each four-minute attempt moved from rest to cycling, early recovery, and late recovery.", zh: "每次四分钟采集依次包括静息、骑行、早期恢复和晚期恢复。" }, contain: true },
+      { src: "/images/cardiac-signal-review.png", alt: { en: "Six-channel heart-sound review interface with cardiac-cycle labels", zh: "带心动周期标记的六通道心音核验界面" }, caption: { en: "I reviewed six-channel recordings in an interactive interface, checking and correcting S1, systole, S2, and diastole boundaries before quality analysis.", zh: "我在交互式界面中核验六通道记录，并在质量分析前检查和校正 S1、收缩期、S2 与舒张期边界。" }, contain: true, wide: true },
+    ],
     aside: { en: "MPhil thesis study. The page foregrounds the decisions that make later diagnostic modelling trustworthy: protocol design, signal quality, repeated measures, and honest limits.", zh: "硕士论文研究。本页重点呈现让后续诊断建模可信的前置工作：研究方案、信号质量、重复测量与边界意识。" },
     detail: [
       { heading: { en: "The problem", zh: "研究问题" }, body: { en: "Coronary disease is demand-dependent, so exertion may expose acoustic changes that are subtle at rest. Yet active exercise also introduces motion, breathing, and contact artefacts. Before testing diagnostic performance, I asked whether usable signals could be acquired during exercise or whether early recovery offered a better compromise.", zh: "冠状动脉疾病与负荷相关，运动可能暴露静息时不明显的声学变化，但也会带来动作、呼吸和接触伪影。因此在验证诊断性能前，我先回答一个基础问题：应当在运动中采集，还是在运动后的早期恢复期采集，才能兼顾生理负荷与信号质量？" } },
@@ -120,6 +125,9 @@ export const entries: PortfolioEntry[] = [
       { label: { en: "Read the open-access paper", zh: "阅读开放获取论文" }, href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13140704/" },
       { label: { en: "DOI record", zh: "DOI 页面" }, href: "https://doi.org/10.1113/EP093235" },
     ],
+    media: [
+      { src: "/images/network-physiology-paper.png", alt: { en: "First page of the Experimental Physiology research article", zh: "Experimental Physiology 研究论文首页" }, caption: { en: "The project developed from an undergraduate dissertation into a first-author, open-access research article.", zh: "该项目由本科毕业课题发展为第一作者开放获取研究论文。" }, contain: true },
+    ],
     aside: { en: "Published in Experimental Physiology. I contributed to study conception and design, data analysis and interpretation, and manuscript development.", zh: "发表于 Experimental Physiology。我参与研究构思与设计、数据分析与解释，以及论文撰写和修订。" },
     detail: [
       { heading: { en: "The interpretive gap", zh: "解释上的缺口" }, body: { en: "SpO₂ entropy describes how predictable a signal is, but the same entropy value can mean different things at 99% and 85% saturation. I therefore treated complexity as a response to physiological challenge, not a stand-alone number, and asked whether departure from the normal response to hypoxia carried clinical information.", zh: "SpO₂ 熵反映信号的可预测性，但同一个熵值出现在 99% 与 85% 血氧时，生理意义并不相同。因此我不再把复杂性视为孤立数值，而把它放回低氧挑战的背景中，考察偏离正常适应反应是否具有临床信息。" } },
@@ -142,6 +150,29 @@ export const entries: PortfolioEntry[] = [
       { heading: { en: "Role", zh: "角色" }, body: { en: "I review research applications as an individual committee member rather than as a representative of an institution or profession. The role calls for attention to scientific justification, proportionality of risk, consent, privacy, participant information, and the practical experience of taking part in a study.", zh: "我以独立委员身份审阅研究申请，而非代表某个机构或专业群体。审查关注科学依据、风险是否适度、知情同意、隐私保护、受试者材料，以及真实参与研究时可能面临的体验。" } },
       { heading: { en: "Perspective and skills", zh: "视角与能力" }, body: { en: "Committee work develops structured risk–benefit reasoning, concise written review, interdisciplinary discussion, and the ability to distinguish regulatory compliance from genuinely participant-centred research design.", zh: "委员会工作训练了结构化风险—获益判断、简洁书面审查、跨专业讨论，以及区分“满足监管要求”与“真正以受试者为中心”的能力。" } },
       { heading: { en: "Review in practice", zh: "实际审查流程" }, body: { en: "For roughly four applications each month, I examine the protocol, participant information, consent materials, recruitment plan, and IRAS documentation before committee discussion. I identify points that need clarification, contribute questions for investigators, and help the committee reach a proportionate, clearly reasoned decision.", zh: "每月约四项申请中，我会在委员会会议前审阅研究方案、受试者信息、知情同意材料、招募计划及 IRAS 文件，识别需澄清之处、向研究团队提出问题，并参与形成适度且论证清楚的审查决定。" } },
+    ],
+  },
+  {
+    slug: "ucl-student-ambassador",
+    section: "experience",
+    year: "2023 — 2025",
+    title: { en: "Faculty of Medical Sciences Student Ambassador", zh: "医学科学学院学生大使" },
+    subtitle: { en: "University College London", zh: "伦敦大学学院" },
+    summary: { en: "Represented the Faculty of Medical Sciences through taster sessions, widening-participation teaching, and individual guidance for prospective students from varied educational and cultural backgrounds.", zh: "通过专业体验课、教育机会拓展教学及一对一申请指导，代表医学科学学院支持来自不同教育与文化背景的潜在申请者。" },
+    tags: [{ en: "Science outreach", zh: "科学传播" }, { en: "Student mentoring", zh: "学生指导" }, { en: "Inclusive education", zh: "包容性教育" }, { en: "Public speaking", zh: "公开表达" }],
+    metrics: [
+      { value: "41", label: { en: "pupils guided in one programme", zh: "名中学生参与单次项目" } },
+      { value: "4/4", label: { en: "median participant feedback", zh: "参与者反馈中位数" } },
+    ],
+    media: [
+      { src: "/images/student-ambassador-team.jpg", alt: { en: "UCL Faculty of Medical Sciences staff and student ambassador team", zh: "UCL 医学科学学院教师与学生大使团队合影" }, caption: { en: "Faculty staff and the student ambassador team following a Medical Sciences taster event.", zh: "医学科学体验活动结束后的学院教师与学生大使团队。" }, contain: true },
+      { src: "/images/student-ambassador-taster-session.jpg", alt: { en: "Iris Feng supporting a skin microscopy teaching session", zh: "Iris Feng 协助皮肤显微观察教学活动" }, caption: { en: "Supporting an interactive skin-microscopy session during a Faculty of Medical Sciences taster programme.", zh: "在医学科学学院体验项目中协助开展互动式皮肤显微观察教学。" }, contain: true },
+    ],
+    aside: { en: "The role combined institutional representation with practical teaching and individual support, requiring scientific accuracy, empathy, and adaptable communication.", zh: "这一角色把学院代表、实践教学与个体支持结合起来，要求兼顾科学准确性、同理心及灵活沟通。" },
+    detail: [
+      { heading: { en: "Taster-session facilitation", zh: "体验课组织与引导" }, body: { en: "I worked with academic staff and fellow ambassadors to welcome prospective students, chair programme sessions, guide small-group activities, and help participants engage with unfamiliar medical concepts. Activities included a skin-microscopy workshop and discussion of how laboratory observations connect with disease mechanisms.", zh: "我与教师及其他学生大使合作接待潜在申请者、主持专业介绍、引导小组活动，并帮助参与者理解陌生的医学概念。活动包括皮肤显微观察，以及讨论实验室观察如何与疾病机制相联系。" } },
+      { heading: { en: "Widening participation", zh: "拓展教育机会" }, body: { en: "In one programme, I led a group of 41 pupils from under-represented backgrounds through the pathophysiology of melanoma. I broke the topic into manageable questions, encouraged participation, and adjusted explanations in response to the group; the sessions received a median feedback score of 4/4.", zh: "在其中一次项目中，我带领 41 名来自代表性不足背景的中学生学习黑色素瘤病理生理学。我把主题拆解为可讨论的问题、鼓励每位学生参与，并根据现场反应调整解释；活动反馈中位数为 4/4。" } },
+      { heading: { en: "Individual guidance", zh: "个体申请指导" }, body: { en: "I also offered one-to-one guidance on applications, personal statements, course selection, and the transition into university study. Working with students from different countries and school systems strengthened cross-cultural communication and taught me to give advice that is specific without becoming prescriptive.", zh: "我还就大学申请、个人陈述、课程选择及进入大学后的学习转变提供一对一建议。与来自不同国家和教育体系的学生交流，提升了我的跨文化沟通能力，也让我学会提供具体但不过度替他人做决定的建议。" } },
     ],
   },
   {
@@ -171,6 +202,11 @@ export const entries: PortfolioEntry[] = [
       { value: "12", label: { en: "interactive learning cases", zh: "个互动学习案例" } },
       { value: "≈2,900", label: { en: "faculty-wide student audience", zh: "名院系潜在学生受众" } },
     ],
+    media: [
+      { src: "/images/changemakers-grant-cover.png", alt: { en: "Cover of the funded ChangeMakers project", zh: "获资助 ChangeMakers 项目封面" }, caption: { en: "The funded project, “Unravelling Learning Objectives into Novel Learning Framework,” was created with Flora Yuqing Cai and supervised by Dr Alireza Mani.", zh: "获资助项目《Unravelling Learning Objectives into Novel Learning Framework》由我与 Flora Yuqing Cai 共同创建，Alireza Mani 博士指导。" }, contain: true },
+      { src: "/images/changemakers-logo.png", alt: { en: "UCL ChangeMakers logo", zh: "UCL ChangeMakers 标识" }, caption: { en: "UCL ChangeMakers supports student–staff partnerships that improve education and the student experience.", zh: "UCL ChangeMakers 支持学生与教师合作改进教学及学生体验。" }, contain: true },
+      { src: "/images/changemakers-interactive-case.png", alt: { en: "Interactive clinical reasoning case on progressive paralysis", zh: "关于进行性瘫痪的互动临床推理案例" }, caption: { en: "An interactive case required students to distinguish ALS from plausible alternatives and provided mechanism-based feedback.", zh: "互动案例要求学生在多种合理诊断中识别 ALS，并通过机制解释获得即时反馈。" }, contain: true, wide: true },
+    ],
     detail: [
       { heading: { en: "Reframing the brief", zh: "重新定义问题" }, body: { en: "The project began as an attempt to improve exam preparation in Applied Medical Sciences. Through discussion with students and teaching staff, I shifted the goal from rehearsing assessment to creating clinically grounded activities that could reveal neglected topics and encourage deeper inquiry.", zh: "项目最初旨在改善应用医学科学学生的考试准备。通过与学生及教师讨论，我把目标从重复应试训练转向具有临床情境的互动活动，用案例补足易被忽视的主题，并鼓励更深入的追问。" } },
       { heading: { en: "Delivery", zh: "项目实施" }, body: { en: "After securing £1,300 in funding from UCL ChangeMakers, I coordinated a student collaborator, academic staff, programme administrators, the ChangeMakers team, and the incoming module lead. We translated learning needs into 12 H5P-style interactive cases spanning neuroscience and clinical mechanisms, with a route into future teaching materials.", zh: "获得 UCL ChangeMakers £1,300 资助后，我协调学生合作者、教师、项目行政人员、ChangeMakers 团队及下一年度课程负责人，把学习需求转化为 12 个 H5P 互动案例，覆盖神经科学与临床机制，并为后续纳入教学资源建立路径。" } },
@@ -188,6 +224,9 @@ export const entries: PortfolioEntry[] = [
     links: [
       { label: { en: "Full text", zh: "阅读全文" }, href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13140704/" },
       { label: { en: "DOI: 10.1113/EP093235", zh: "DOI：10.1113/EP093235" }, href: "https://doi.org/10.1113/EP093235" },
+    ],
+    media: [
+      { src: "/images/network-physiology-paper.png", alt: { en: "First page of the published Experimental Physiology article", zh: "发表于 Experimental Physiology 的论文首页" }, caption: { en: "Feng, S. I. et al. (2026), published open access in Experimental Physiology.", zh: "Feng, S. I. 等（2026），开放获取发表于 Experimental Physiology。" }, contain: true },
     ],
     detail: [
       { heading: { en: "In brief", zh: "论文简述" }, body: { en: "The paper introduces a signed distance from the healthy relationship between mean oxygen saturation and entropy. Applied across four critical-illness cohorts, the measure identified distinct patterns of physiological dysregulation and an independent association with 30-day mortality in sepsis.", zh: "论文以健康人平均血氧与熵的关系为参照，提出带方向的偏离距离。该指标在四类危重病队列中呈现不同的生理失调模式，并在脓毒症中与 30 天死亡风险独立相关。" } },

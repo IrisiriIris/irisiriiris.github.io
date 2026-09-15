@@ -42,7 +42,7 @@ export function DetailClient({ entry }: { entry: PortfolioEntry }) {
         {entry.media && (
           <div className={`media-grid ${entry.media.length === 1 ? "single" : ""}`}>
             {entry.media.map((item) => (
-              <figure key={item.src} className={item.contain ? "contain" : undefined}>
+              <figure key={item.src} className={[item.contain && "contain", item.wide && "wide"].filter(Boolean).join(" ") || undefined}>
                 <a href={item.src} target="_blank" rel="noreferrer" aria-label={zh ? "打开大图" : "Open full-size image"}>
                   <img src={item.src} alt={text(item.alt, language)} />
                 </a>

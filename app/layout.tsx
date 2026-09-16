@@ -4,7 +4,7 @@ import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const incoming = await headers();
-  const host = incoming.get("host") ?? "iris-feng-portfolio.irisfeng10166fsy.chatgpt.site";
+  const host = incoming.get("host") ?? "irisiriiris.github.io";
   const protocol = host.includes("localhost") ? "http" : "https";
   const origin = `${protocol}://${host}`;
   const title = "Iris Feng — Academic Portfolio";

@@ -1,6 +1,6 @@
 export type Language = "en" | "zh";
 export type LocalizedText = { en: string; zh: string };
-export type SectionId = "education" | "research" | "experience" | "publications" | "awards";
+export type SectionId = "education" | "research" | "experience" | "publications" | "awards" | "extracurricular";
 
 export type PortfolioEntry = {
   slug: string;
@@ -23,6 +23,7 @@ export const sections: { id: SectionId; label: LocalizedText; intro: LocalizedTe
   { id: "experience", label: { en: "Experience", zh: "实践经历" }, intro: { en: "Research governance, science communication, and educational innovation.", zh: "科研治理、科学传播与教育创新实践。" } },
   { id: "publications", label: { en: "Publications", zh: "论文成果" }, intro: { en: "Peer-reviewed research and substantial academic outputs.", zh: "同行评议论文与主要学术成果。" } },
   { id: "awards", label: { en: "Awards", zh: "获奖经历" }, intro: { en: "Recognition for physiology research and collaborative clinical reasoning.", zh: "在生理学研究与团队临床推理方面获得的认可。" } },
+  { id: "extracurricular", label: { en: "Extracurricular", zh: "课外活动" }, intro: { en: "Creative practice and public-facing roles that developed discipline, composure, and communication beyond formal study.", zh: "在正式学习之外，通过艺术实践与公共活动培养自律、临场应变与沟通能力。" } },
 ];
 
 export const entries: PortfolioEntry[] = [
@@ -329,6 +330,50 @@ export const entries: PortfolioEntry[] = [
       { heading: { en: "Purpose of the visit", zh: "访问目的" }, body: { en: "From 9–11 February 2026, I visited the Extreme Environments Laboratory to deepen a collaboration that began during my undergraduate research. I met Dr Joe Costello and Dr Tom Williams in person and discussed the healthy graded-hypoxia dataset used to establish the reference trajectory in my oxygen-saturation study.", zh: "2026 年 2 月 9—11 日，我访问极端环境实验室，以深化本科研究期间建立的合作。我与 Joe Costello 博士和 Tom Williams 博士线下交流，并讨论用于建立血氧研究健康参考轨迹的分级低氧数据。" } },
       { heading: { en: "Understanding how the data were made", zh: "理解数据如何产生" }, body: { en: "Seeing the climate chambers, simulated-altitude facilities, immersion systems, and measurement workflows made the experimental origins of the dataset tangible. It reinforced that physiological signal analysis begins long before an algorithm: environmental control, instrumentation, protocol consistency, and participant safety all shape what the data can support.", zh: "参观气候舱、模拟海拔设施、浸水系统及测量流程后，我更具体地理解了数据的实验来源。生理信号分析远在算法之前便已开始：环境控制、仪器、方案一致性及受试者安全都会决定数据最终能够支持怎样的结论。" } },
       { heading: { en: "Research development", zh: "科研发展" }, body: { en: "The visit connected computational analysis with experimental physiology and opened conversations about future doctoral training and collaborative research. It strengthened my ability to evaluate data provenance, communicate across laboratories, and place analytical findings within the conditions under which signals were collected.", zh: "这次访问把计算分析与实验生理学重新连接起来，也促成了关于博士训练与后续合作的讨论。它进一步训练了我评估数据来源、开展跨实验室沟通，并把分析结果放回原始采集条件中解释的能力。" } },
+    ],
+  },
+  {
+    slug: "piano-performance",
+    section: "extracurricular",
+    year: "Ongoing",
+    title: { en: "Piano", zh: "钢琴" },
+    subtitle: { en: "Performance and creative practice", zh: "演奏与艺术实践" },
+    summary: { en: "Piano has remained a creative practice alongside my academic work, including live performances at university and community events.", zh: "钢琴始终是我学术学习之外的重要艺术实践，也让我有机会在大学及社群活动中进行现场演奏。" },
+    tags: [{ en: "Performance", zh: "现场演奏" }, { en: "Creative practice", zh: "艺术实践" }, { en: "Discipline", zh: "长期训练" }],
+    media: [
+      { src: "/images/piano-performance.jpg", alt: { en: "Iris Feng performing on a grand piano before an audience", zh: "Iris Feng 在观众面前演奏三角钢琴" }, caption: { en: "A live piano performance in a university setting.", zh: "在大学活动中进行现场钢琴演奏。" }, wide: true },
+      { src: "/images/piano-event.jpeg", alt: { en: "Iris Feng performing piano on stage", zh: "Iris Feng 在舞台上演奏钢琴" }, caption: { en: "Performing on stage as part of a wider community event.", zh: "在社群活动中进行舞台演奏。" }, contain: true },
+    ],
+    aside: { en: "Music provides a different form of concentration from research: performance makes preparation visible in real time and leaves little room to hide from uncertainty.", zh: "音乐带来一种不同于科研的专注：舞台让准备过程在当下被检验，也训练人在不确定中保持稳定。" },
+    detail: [
+      { heading: { en: "A practice alongside science", zh: "科学之外的长期实践" }, body: { en: "Continuing piano alongside medical science has given me a deliberate space for close listening, repetition, and interpretation. Progress depends less on a single performance than on returning to difficult passages, noticing small changes, and building consistency over time.", zh: "在医学科学学习之外持续练习钢琴，让我保留了一个专注聆听、重复训练与表达理解的空间。进步并不取决于某一次演出，而来自反复面对困难段落、察觉细微变化，并长期建立稳定性。" } },
+      { heading: { en: "Performing for an audience", zh: "面向观众的演奏" }, body: { en: "Live performance required me to turn private preparation into a clear experience for an audience. Playing at university and community events strengthened stage awareness, calmness under observation, and the ability to recover without interrupting the wider event.", zh: "现场演奏要求我把个人练习转化为观众能够感受到的完整体验。在大学及社群活动中演奏，训练了舞台意识、被注视时的沉着，以及出现偏差后不中断整体节奏的恢复能力。" } },
+      { heading: { en: "What it carries into my work", zh: "对学习与工作的影响" }, body: { en: "Piano has reinforced habits that also matter in research: patient preparation, sensitivity to patterns, honest self-correction, and respect for the difference between technical accuracy and meaningful communication.", zh: "钢琴也强化了科研中同样重要的习惯：耐心准备、对模式的敏感、诚实自我修正，以及理解“技术准确”与“有效表达”之间的差别。" } },
+    ],
+  },
+  {
+    slug: "hosting-ceremonies",
+    section: "extracurricular",
+    year: "2021",
+    title: { en: "Hosting a large-scale anniversary ceremony", zh: "大型校庆典礼主持" },
+    subtitle: { en: "Kang Chiao International School · Lead host", zh: "康桥国际学校 · 主持人" },
+    summary: { en: "Led an outdoor anniversary ceremony for more than 2,000 students, teachers, and school leaders, coordinating the programme and responding to live technical and performance disruptions.", zh: "主持一场面向 2,000 余名师生及学校管理者的户外周年庆典，统筹现场流程，并处理突发技术与表演问题。" },
+    tags: [{ en: "Public speaking", zh: "公开表达" }, { en: "Event coordination", zh: "活动协调" }, { en: "Crisis response", zh: "临场应变" }, { en: "Teamwork", zh: "团队协作" }],
+    metrics: [
+      { value: "2,000+", label: { en: "students, staff, and leaders", zh: "名师生及学校管理者" } },
+      { value: "800 m", label: { en: "outdoor track venue", zh: "户外跑道会场" } },
+    ],
+    media: [
+      { src: "/images/hosting-stage-1.jpg", alt: { en: "Iris Feng hosting the school anniversary ceremony", zh: "Iris Feng 主持学校周年庆典" }, caption: { en: "Hosting the seventh-anniversary ceremony before the assembled school community.", zh: "面向全校师生主持七周年庆典。" }, contain: true },
+      { src: "/images/hosting-stage-2.jpg", alt: { en: "Hosts on the outdoor anniversary stage", zh: "主持人在户外周年庆典舞台上" }, caption: { en: "The outdoor setting required close coordination across hosts, performers, and the technical team.", zh: "户外会场要求主持人、表演团队与技术人员保持紧密协作。" }, contain: true },
+      { src: "/images/hosting-stage-3.jpg", alt: { en: "Ceremony programme on the school track", zh: "学校跑道上的典礼流程" }, caption: { en: "The programme brought together speeches, performances, and a school-wide finale.", zh: "典礼流程包括致辞、表演及全校共同参与的闭幕环节。" }, contain: true },
+      { src: "/images/hosting-stage-4.jpg", alt: { en: "Anniversary event audience and stage", zh: "周年活动现场观众与舞台" }, caption: { en: "More than 2,000 students, teachers, and school leaders attended the event.", zh: "活动共有 2,000 余名学生、教师及学校管理者参加。" }, contain: true },
+    ],
+    aside: { en: "The experience was less about reading a script than maintaining continuity: listening to the room, making fast decisions, and supporting the wider team when plans changed.", zh: "这次经历并不只是照稿主持，更重要的是维持现场连续性：观察全场、快速判断，并在计划变化时支持整个团队。" },
+    detail: [
+      { heading: { en: "Event responsibility", zh: "活动职责" }, body: { en: "In April 2021, I served as lead host for Kang Chiao International School's seventh-anniversary ceremony, a large outdoor event held on the school's 800-metre track. I worked with school leaders, organisers, technical staff, performers, and my co-host to refine the script, rehearse transitions, and keep the programme coherent for an audience of more than 2,000.", zh: "2021 年 4 月，我担任康桥国际学校七周年庆典主持人。活动在学校 800 米跑道举行，现场超过 2,000 人。我与学校管理者、活动组织者、技术人员、表演团队及搭档共同完善主持稿、排练衔接，并确保整体流程连贯。" } },
+      { heading: { en: "Responding when the plan changed", zh: "计划变化时的临场处理" }, body: { en: "Two disruptions required immediate decisions. When a keynote speaker's microphone failed, I handed over mine so the speech could continue without a lengthy delay. Later, when the designated anthem lead was absent, I used the lyrics kept with my notes and stepped in to lead the choir and orchestra, allowing the ceremony to close as planned.", zh: "现场两次突发情况需要立即处理。主讲嘉宾麦克风失灵时，我直接将自己的麦克风交给嘉宾，避免流程长时间中断；闭幕环节原定领唱缺席时，我利用事先随稿准备的歌词临时领唱，并带领合唱团与乐团按计划完成校歌。" } },
+      { heading: { en: "Coordination and reflection", zh: "协作与复盘" }, body: { en: "The role extended beyond stage delivery. Multiple rehearsals aligned timing and responsibilities across teams, while post-event debriefs turned unexpected problems into practical contingency plans, including backup microphones and alternate performers. The experience strengthened public speaking, team coordination, preparation, and calm decision-making under pressure.", zh: "主持工作也延伸到台前之外。多轮排练帮助不同团队对齐时间与职责；活动后的复盘则把突发问题转化为具体预案，例如准备备用麦克风和替补表演人员。这段经历强化了公开表达、团队协调、预先准备及压力下冷静决策的能力。" } },
     ],
   },
 ];

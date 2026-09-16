@@ -33,7 +33,7 @@ export const entries: PortfolioEntry[] = [
     year: "2025 — 2026",
     title: { en: "MPhil in Translating Medical Device and Advanced Therapy Research", zh: "医疗器械与先进疗法转化研究MPhil研究硕士" },
     subtitle: { en: "University of Cambridge", zh: "剑桥大学" },
-    summary: { en: "A translational programme connecting device development and advanced therapies with clinical study design, regulation, statistics, and commercialisation.", zh: "以转化医学为主线，将医疗器械与先进疗法研发同临床研究、监管、统计及成果转化相连接。" },
+    summary: { en: "Completed with Distinction, an overall mark of 78%, and a third-place cohort ranking. The programme connected device development and advanced therapies with clinical study design, regulation, statistics, and commercialisation.", zh: "以总成绩 78% 获 Distinction，同届排名第 3。课程以转化医学为主线，将医疗器械与先进疗法研发同临床研究、监管、统计及成果转化相连接。" },
     tags: [
       { en: "Medical Device Innovation", zh: "医疗器械创新" },
       { en: "Gene, Cell & CAR-T Therapies", zh: "基因、细胞及 CAR-T 治疗" },
@@ -43,7 +43,13 @@ export const entries: PortfolioEntry[] = [
       { en: "Medical Regulation", zh: "医疗监管" },
       { en: "Translation & Commercialisation", zh: "生物医学技术转化与商业化" },
     ],
+    metrics: [
+      { value: "78%", label: { en: "overall programme mark", zh: "总成绩" } },
+      { value: "Distinction", label: { en: "degree result", zh: "学位等级" } },
+      { value: "3rd", label: { en: "in the cohort", zh: "同届排名" } },
+    ],
     detail: [
+      { heading: { en: "Academic result", zh: "学业成绩" }, body: { en: "I completed the MPhil with Distinction, receiving an overall programme mark of 78% and ranking third in the cohort.", zh: "我以总成绩 78% 完成 MPhil，获 Distinction，并位列同届第 3 名。" } },
       { heading: { en: "Device and therapy development", zh: "器械与疗法开发" }, body: { en: "Training covered device innovation, AI and software as medical devices, implantable systems, verification and validation, risk management, user interfaces, and quality and safety. Advanced-therapy teaching included stem-cell and gene-based products, in-vitro toxicology, manufacturing, and scale-up.", zh: "课程涵盖器械创新、AI 与医疗软件、植入式器械、验证与确认、风险管理、用户界面及质量安全；先进疗法部分则包括干细胞与基因类产品、体外毒理、生产与规模化。" } },
       { heading: { en: "Clinical and quantitative methods", zh: "临床与定量方法" }, body: { en: "Clinical trial design, ethics and Research Ethics Committees, first-in-human studies, systematic review, and qualitative research were paired with R-based statistics, regression, survival analysis, sample-size planning, and adaptive trial designs.", zh: "临床试验设计、研究伦理与 REC、首次人体研究、系统综述和定性研究，与基于 R 的统计、回归、生存分析、样本量设计及适应性试验相结合。" } },
       { heading: { en: "Translation and implementation", zh: "转化与实施" }, body: { en: "The programme also examined health economics, stakeholder engagement, business models, pricing, intellectual property, commercialisation, sustainability, and communication—placing technical evidence within the full path from laboratory to patient use.", zh: "课程同时涉及卫生经济学、利益相关者沟通、商业模式、定价、知识产权、商业化、可持续性与媒体传播，帮助我从实验室到患者应用的完整路径理解技术证据。" } },

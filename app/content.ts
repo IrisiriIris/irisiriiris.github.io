@@ -22,9 +22,9 @@ export const sections: { id: SectionId; label: LocalizedText; intro: LocalizedTe
   { id: "research", label: { en: "Research", zh: "科研" }, intro: { en: "Human studies and physiological data, connected by a focus on clinically meaningful signals.", zh: "围绕具有临床意义的生理信号，开展人体研究与数据分析。" } },
   { id: "experience", label: { en: "Experience", zh: "实践经历" }, intro: { en: "Research governance, science communication, and educational innovation.", zh: "科研治理、科学传播与教育创新实践。" } },
   { id: "publications", label: { en: "Publications", zh: "论文成果" }, intro: { en: "Peer-reviewed research and substantial academic outputs.", zh: "同行评议论文与主要学术成果。" } },
+  { id: "coding", label: { en: "Coding", zh: "编程" }, intro: { en: "Applied programming across physiological signal processing, statistical modelling, bioinformatics, and embedded prototyping.", zh: "将编程应用于生理信号处理、统计建模、生物信息学与嵌入式原型开发。" } },
   { id: "awards", label: { en: "Awards", zh: "获奖经历" }, intro: { en: "Recognition for physiology research and collaborative clinical reasoning.", zh: "在生理学研究与团队临床推理方面获得的认可。" } },
   { id: "extracurricular", label: { en: "Extracurricular", zh: "课外活动" }, intro: { en: "Creative practice and public-facing roles that developed discipline, composure, and communication beyond formal study.", zh: "在正式学习之外，通过艺术实践与公共活动培养自律、临场应变与沟通能力。" } },
-  { id: "coding", label: { en: "Coding", zh: "编程" }, intro: { en: "Applied programming across physiological signal processing, statistical modelling, bioinformatics, and embedded prototyping.", zh: "将编程应用于生理信号处理、统计建模、生物信息学与嵌入式原型开发。" } },
 ];
 
 export const entries: PortfolioEntry[] = [

@@ -15,18 +15,18 @@
   - Publications / 论文发表
     - `/portfolio/selected-publication`
     - `/portfolio/works-in-progress`
-  - Awards / 获奖经历
-    - `/portfolio/academic-awards`
-    - `/portfolio/leadership-service-awards`
-  - Extracurricular / 课外活动
-    - `/portfolio/piano-performance`
-    - `/portfolio/hosting-ceremonies`
   - Coding / 编程
     - `/portfolio/coding-python`
     - `/portfolio/coding-matlab`
     - `/portfolio/coding-r`
     - `/portfolio/coding-cpp`
     - `/portfolio/coding-stata`
+  - Awards / 获奖经历
+    - `/portfolio/academic-awards`
+    - `/portfolio/leadership-service-awards`
+  - Extracurricular / 课外活动
+    - `/portfolio/piano-performance`
+    - `/portfolio/hosting-ceremonies`
 
 ## Component and layout plan
 

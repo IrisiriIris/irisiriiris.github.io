@@ -8,8 +8,9 @@ export function DetailClient({ entry }: { entry: PortfolioEntry }) {
   const { language, setLanguage } = useLanguage();
   const zh = language === "zh";
   const section = sections.find((item) => item.id === entry.section)!;
-  const index = entries.findIndex((item) => item.slug === entry.slug);
-  const next = entries[(index + 1) % entries.length];
+  const orderedEntries = sections.flatMap((item) => entries.filter((candidate) => candidate.section === item.id));
+  const index = orderedEntries.findIndex((item) => item.slug === entry.slug);
+  const next = orderedEntries[(index + 1) % orderedEntries.length];
 
   return (
     <main>

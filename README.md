@@ -13,7 +13,7 @@ You do not need to edit HTML for routine updates. On GitHub, open `app/content.t
 ## Navigation model
 
 - English / Chinese switch: remembered on the reader's device and included in shareable URLs.
-- Top navigation: Education, Research, Experience, Publications, Awards, Extracurricular, Coding.
+- Top navigation: Education, Research, Experience, Publications, Coding, Awards, Extracurricular.
 - Homepage index: clicking a category reveals its specific items.
 - Detail pages: reusable editorial layout with overview sections and next-item navigation.
 

@@ -1,6 +1,6 @@
 export type Language = "en" | "zh";
 export type LocalizedText = { en: string; zh: string };
-export type SectionId = "education" | "research" | "experience" | "publications" | "awards" | "extracurricular";
+export type SectionId = "education" | "research" | "experience" | "publications" | "awards" | "extracurricular" | "coding";
 
 export type PortfolioEntry = {
   slug: string;
@@ -24,6 +24,7 @@ export const sections: { id: SectionId; label: LocalizedText; intro: LocalizedTe
   { id: "publications", label: { en: "Publications", zh: "论文成果" }, intro: { en: "Peer-reviewed research and substantial academic outputs.", zh: "同行评议论文与主要学术成果。" } },
   { id: "awards", label: { en: "Awards", zh: "获奖经历" }, intro: { en: "Recognition for physiology research and collaborative clinical reasoning.", zh: "在生理学研究与团队临床推理方面获得的认可。" } },
   { id: "extracurricular", label: { en: "Extracurricular", zh: "课外活动" }, intro: { en: "Creative practice and public-facing roles that developed discipline, composure, and communication beyond formal study.", zh: "在正式学习之外，通过艺术实践与公共活动培养自律、临场应变与沟通能力。" } },
+  { id: "coding", label: { en: "Coding", zh: "编程" }, intro: { en: "Applied programming across physiological signal processing, statistical modelling, bioinformatics, and embedded prototyping.", zh: "将编程应用于生理信号处理、统计建模、生物信息学与嵌入式原型开发。" } },
 ];
 
 export const entries: PortfolioEntry[] = [
@@ -380,6 +381,140 @@ export const entries: PortfolioEntry[] = [
       { heading: { en: "Event responsibility", zh: "活动职责" }, body: { en: "In April 2021, I served as lead host for Kang Chiao International School's seventh-anniversary ceremony, a large outdoor event held on the school's 800-metre track. I worked with school leaders, organisers, technical staff, performers, and my co-host to refine the script, rehearse transitions, and keep the programme coherent for an audience of more than 2,000.", zh: "2021 年 4 月，我担任康桥国际学校七周年庆典主持人。活动在学校 800 米跑道举行，现场超过 2,000 人。我与学校管理者、活动组织者、技术人员、表演团队及搭档共同完善主持稿、排练衔接，并确保整体流程连贯。" } },
       { heading: { en: "Responding when the plan changed", zh: "计划变化时的临场处理" }, body: { en: "Two disruptions required immediate decisions. When a keynote speaker's microphone failed, I handed over mine so the speech could continue without a lengthy delay. Later, when the designated anthem lead was absent, I used the lyrics kept with my notes and stepped in to lead the choir and orchestra, allowing the ceremony to close as planned.", zh: "现场两次突发情况需要立即处理。主讲嘉宾麦克风失灵时，我直接将自己的麦克风交给嘉宾，避免流程长时间中断；闭幕环节原定领唱缺席时，我利用事先随稿准备的歌词临时领唱，并带领合唱团与乐团按计划完成校歌。" } },
       { heading: { en: "Coordination and reflection", zh: "协作与复盘" }, body: { en: "The role extended beyond stage delivery. Multiple rehearsals aligned timing and responsibilities across teams, while post-event debriefs turned unexpected problems into practical contingency plans, including backup microphones and alternate performers. The experience strengthened public speaking, team coordination, preparation, and calm decision-making under pressure.", zh: "主持工作也延伸到台前之外。多轮排练帮助不同团队对齐时间与职责；活动后的复盘则把突发问题转化为具体预案，例如准备备用麦克风和替补表演人员。这段经历强化了公开表达、团队协调、预先准备及压力下冷静决策的能力。" } },
+    ],
+  },
+  {
+    slug: "coding-python",
+    section: "coding",
+    year: "2025 — Present",
+    title: { en: "Python", zh: "Python" },
+    subtitle: { en: "Research software · signal processing · bioinformatics", zh: "科研软件 · 信号处理 · 生物信息学" },
+    summary: { en: "Built reproducible workflows around cardiac-acoustic research—from Git and conda setup and NI data acquisition to six-channel signal processing, interactive review tools, quality control, and publication-ready visualisation—while also applying computational thinking to sequence-based bioinformatics.", zh: "围绕心脏声学研究建立可复现工作流：从 Git、conda 环境及 NI 数据采集，到六通道信号处理、交互式核验工具、质量控制与发表级可视化；同时将计算思维应用于序列生物信息学。" },
+    tags: [
+      { en: "NumPy · pandas · SciPy", zh: "NumPy · pandas · SciPy" },
+      { en: "Matplotlib GUI", zh: "Matplotlib GUI" },
+      { en: "Signal processing", zh: "信号处理" },
+      { en: "Git · conda", zh: "Git · conda" },
+      { en: "NI-DAQ", zh: "NI-DAQ" },
+      { en: "Bioinformatics", zh: "生物信息学" },
+    ],
+    metrics: [
+      { value: "6", label: { en: "acoustic channels handled", zh: "路声学通道" } },
+      { value: "936", label: { en: "recording-state records audited", zh: "条记录状态完成审计" } },
+      { value: "39", label: { en: "participants in the final pipeline", zh: "名受试者进入最终流程" } },
+    ],
+    media: [
+      { src: "/images/cardiac-signal-review.png", alt: { en: "Python review interface showing six cardiac-acoustic channels and cardiac-state labels", zh: "显示六通道心脏声学信号及心动周期标签的 Python 核验界面" }, caption: { en: "A research-facing review interface for checking six-channel recordings and correcting S1, systole, S2, and diastole boundaries.", zh: "用于核验六通道记录，并检查和校正 S1、收缩期、S2 与舒张期边界的科研界面。" }, contain: true, wide: true },
+    ],
+    aside: { en: "My Python work sits at the boundary between instrument, signal, model, and researcher: code is useful only when each transformation remains inspectable and physiologically defensible.", zh: "我的 Python 实践位于仪器、信号、模型与研究者之间：只有当每一步转换都可核查、且在生理学上站得住脚时，代码才真正有用。" },
+    detail: [
+      { heading: { en: "Reproducible working environments", zh: "可复现的开发环境" }, body: { en: "I learned to enter unfamiliar research repositories safely: cloning and navigating Git projects, creating and activating isolated Anaconda/conda environments, installing pinned dependencies, resolving interpreter and path problems, and running scripts from VS Code or the command line. I use branches, commits, pulls, diffs, and versioned output folders to preserve working analyses rather than editing a single fragile copy in place.", zh: "我学习了如何安全进入陌生科研代码库：克隆和浏览 Git 项目，创建并激活独立的 Anaconda/conda 环境，安装固定版本依赖，处理解释器与路径问题，并在 VS Code 或命令行运行脚本。我使用分支、提交、拉取、差异检查及版本化输出目录保留可工作的分析，而不是在唯一副本上反复覆盖修改。" } },
+      { heading: { en: "From NI hardware to analysable data", zh: "从 NI 硬件到可分析数据" }, body: { en: "In the cardiac-acoustics study I worked across the acquisition stack: checking National Instruments hardware in NI MAX, understanding channel and sampling configuration, and using the Python nidaqmx-based workflow that connects the six-sensor patch to the recording software. I learned to distinguish device, driver, configuration, database, and analysis failures, and to verify metadata and raw traces before interpreting downstream results.", zh: "在心脏声学研究中，我接触了完整采集链路：使用 NI MAX 检查 National Instruments 硬件，理解通道与采样配置，并使用基于 Python nidaqmx 的工作流，将六传感器贴片连接到记录软件。我逐渐能够区分设备、驱动、配置、数据库与分析环节的故障，并在解释下游结果前核验元数据和原始波形。" } },
+      { heading: { en: "Signal processing and cardiac segmentation", zh: "信号处理与心动周期分割" }, body: { en: "Using NumPy, pandas, and SciPy, I worked with multichannel physiological time series through zero-centring, band-pass filtering, de-spiking, polyphase resampling, windowing, cross-correlation, SNR calculation, and heart-rate estimation from verified S1 timings. I also learned how a pretrained recurrent model generates frame-level cardiac-state probabilities, how evidence is fused across sensors, and how an HMM/HSMM Viterbi decoder combines probability, cardiac-state order, and heart-rate-dependent duration constraints.", zh: "我使用 NumPy、pandas 与 SciPy 处理多通道生理时间序列，包括去均值、带通滤波、尖峰去除、多相重采样、分窗、互相关、SNR 计算，以及基于已核验 S1 时点估算心率。我也理解了预训练循环模型如何生成逐帧心动状态概率、多传感器证据如何融合，以及 HMM/HSMM Viterbi 解码器如何综合概率、心动状态顺序与随心率变化的持续时间约束。" } },
+      { heading: { en: "Interactive GUI and quality control", zh: "交互式 GUI 与质量控制" }, body: { en: "I used and extended a Qt-backed Matplotlib interface that combines waveform display, audio playback, channel selection, zoom and navigation, cardiac-state overlays, RR intervals, model posteriors, and editable boundaries. The workflow supported chunk-level review, correction, explicit unsegmentable labels, missed-beat inspection, and separate pass-one/pass-two outputs so manual decisions remained auditable rather than disappearing into a final CSV.", zh: "我使用并扩展了基于 Qt 与 Matplotlib 的交互界面，将波形显示、音频播放、通道选择、缩放与导航、心动状态覆盖、RR 间期、模型后验概率及可编辑边界整合在一起。该流程支持分块核验、人工校正、明确标记不可分割片段、检查漏搏，并分别保留第一轮与第二轮结果，使人工判断能够追溯，而不是消失在最终 CSV 中。" } },
+      { heading: { en: "Analysis, plotting, and bioinformatics", zh: "分析、绘图与生物信息学" }, body: { en: "I automated cohort assembly, data joins, eligibility rules, summary tables, audit checks, and Matplotlib figures for signal quality and heart-rate recovery. In an earlier bioinformatics project, I moved from unannotated mRNA sequences to a clinically interpretable HBB variant, combining computational sequence handling with BLAST, Clustal Omega, ExPASy translation, PyMOL, GTEx, and Ensembl to connect a nucleotide change with altered β-globin and sickle-cell pathophysiology.", zh: "我用 Python 自动完成队列整理、数据合并、纳入规则、汇总表、审计检查，以及信号质量和心率恢复的 Matplotlib 绘图。在此前的生物信息学项目中，我从未注释 mRNA 序列出发，结合计算化序列处理、BLAST、Clustal Omega、ExPASy 翻译、PyMOL、GTEx 与 Ensembl，识别具有临床意义的 HBB 变异，并把核苷酸改变连接到 β-珠蛋白变化及镰状细胞病的病理生理。" } },
+    ],
+  },
+  {
+    slug: "coding-matlab",
+    section: "coding",
+    year: "2024 — 2026",
+    title: { en: "MATLAB", zh: "MATLAB" },
+    subtitle: { en: "Network physiology · entropy · time-series analysis", zh: "网络生理学 · 熵 · 时间序列分析" },
+    summary: { en: "Developed physiological time-series workflows for SpO₂ and heart-rate variability, progressing from sample and multiscale entropy to a directional parenclitic framework that contextualised signal complexity against hypoxia severity.", zh: "为 SpO₂ 与心率变异性建立生理时间序列分析流程，从样本熵、多尺度熵进一步发展到方向性偏联框架，把信号复杂度放回低氧严重程度中解释。" },
+    tags: [
+      { en: "Sample entropy", zh: "样本熵" },
+      { en: "Multiscale entropy", zh: "多尺度熵" },
+      { en: "Parenclitic analysis", zh: "偏联分析" },
+      { en: "HRV · SDNN", zh: "HRV · SDNN" },
+      { en: "Fractals", zh: "分形" },
+    ],
+    metrics: [
+      { value: "450", label: { en: "ICU patients analysed", zh: "例 ICU 患者" } },
+      { value: "4", label: { en: "critical-illness cohorts", zh: "类危重病队列" } },
+      { value: "1 Hz", label: { en: "physiological time series", zh: "生理时间序列" } },
+    ],
+    media: [
+      { src: "/images/network-physiology-paper.png", alt: { en: "Published study developed from MATLAB analysis of oxygen-saturation variability", zh: "由 MATLAB 血氧变异性分析发展形成的发表论文" }, caption: { en: "The MATLAB analysis grew from an undergraduate project into a first-author paper in Experimental Physiology.", zh: "这套 MATLAB 分析由本科课题发展为发表于 Experimental Physiology 的第一作者论文。" }, contain: true },
+    ],
+    aside: { en: "MATLAB was where I first learned that a physiological metric becomes meaningful only after its assumptions, reference condition, and visual interpretation are made explicit.", zh: "MATLAB 是我最早系统理解“生理指标只有在假设、参照条件与可视化解释被明确后才有意义”的实践平台。" },
+    detail: [
+      { heading: { en: "Building the physiological time-series workflow", zh: "建立生理时间序列流程" }, body: { en: "I worked with one-hertz SpO₂ recordings from healthy graded-hypoxia experiments and ICU cohorts with sepsis, COPD, acute liver failure, and cirrhosis. MATLAB scripts organised participant files, extracted standardised analysis windows, handled group labels and outcomes, calculated descriptive summaries, and produced trace-level and cohort-level figures. Related scripts explored heart-rate and SDNN measures so oxygen-saturation variability could be interpreted alongside broader autonomic behaviour.", zh: "我处理健康人分级低氧实验及脓毒症、COPD、急性肝衰竭和肝硬化 ICU 队列的 1 Hz SpO₂ 记录。MATLAB 脚本用于整理受试者文件、提取标准化分析窗口、管理分组与结局变量、计算描述性结果，并生成个体轨迹和队列图。相关脚本还探索心率与 SDNN，使血氧变异性能够与更广泛的自主调控表现共同理解。" } },
+      { heading: { en: "Sample and multiscale entropy", zh: "样本熵与多尺度熵" }, body: { en: "I implemented and adapted sample-entropy calculations to quantify the predictability of SpO₂ fluctuations, then used multiscale entropy to test whether apparent complexity persisted after coarse-graining rather than depending on one sampling scale. This required careful choices around window length, embedding parameters, tolerance, missing values, and signals that were too regular to yield stable estimates.", zh: "我实现并调整样本熵计算，用于量化 SpO₂ 波动的可预测性；随后使用多尺度熵检验这种复杂性在粗粒化后是否仍然存在，而非只依赖某一个采样尺度。过程中需要认真处理窗口长度、嵌入参数、容差、缺失值，以及过于规则而难以产生稳定估计的信号。" } },
+      { heading: { en: "Directional parenclitic modelling", zh: "方向性偏联建模" }, body: { en: "The central methodological step was to fit the healthy relationship between mean SpO₂ and entropy under graded hypoxia, then calculate each patient signal's signed perpendicular distance from that reference trajectory. The resulting δ measure distinguished blunted variability from excessive irregularity at the same hypoxia severity. I used it to compare disease groups and to prepare variables for survival analysis, turning an abstract complexity measure into a physiologically contextualised marker.", zh: "核心方法是先拟合健康人在分级低氧下平均 SpO₂ 与熵的关系，再计算每段患者信号到健康参考轨迹的带符号垂直距离。所得 δ 指标能够在相同低氧严重程度下区分变异受抑与过度紊乱。我用它比较不同疾病队列，并为生存分析准备变量，使抽象的复杂度指标成为具有生理背景的标志物。" } },
+      { heading: { en: "From exploratory code to research output", zh: "从探索代码到研究成果" }, body: { en: "The workflow required repeated visual checking of traces, distributions, regression geometry, group differences, and sensitivity across entropy definitions. I learned to separate exploratory scripts from final reproducible analyses, annotate figures clearly, and preserve the chain from raw waveform to derived metric and clinical interpretation. This work ultimately supported a first-author peer-reviewed publication.", zh: "整个流程需要反复核查原始轨迹、分布、回归几何关系、组间差异及不同熵定义下的敏感性。我逐渐学会区分探索性脚本与最终可复现分析，清晰标注图形，并保留从原始波形到派生指标再到临床解释的完整链路；这项工作最终形成第一作者同行评议论文。" } },
+      { heading: { en: "Chaos games and fractal experiments", zh: "混沌游戏与分形实验" }, body: { en: "Alongside biomedical analysis, I used MATLAB for small computational experiments with the chaos game and fractal generation. Iterative random vertex selection, coordinate updates, loops, user parameters, and animated plotting produced Sierpiński-like structures from simple rules. These exercises made recursion, emergence, stochastic simulation, and geometric visualisation intuitive rather than purely mathematical abstractions.", zh: "除生物医学分析外，我也用 MATLAB 制作混沌游戏与分形生成的小型实验。通过随机选取顶点、迭代更新坐标、循环、用户参数和动态图形，由简单规则生成类似 Sierpiński 三角形的结构。这些练习把递归、涌现、随机模拟与几何可视化从抽象概念变成了直观过程。" } },
+    ],
+  },
+  {
+    slug: "coding-r",
+    section: "coding",
+    year: "2025 — 2026",
+    title: { en: "R", zh: "R" },
+    subtitle: { en: "Mixed-effects modelling · Bayesian sensitivity · diagnostics", zh: "混合效应模型 · 贝叶斯敏感性分析 · 模型诊断" },
+    summary: { en: "Applied postgraduate statistical training to repeated-measures cardiac-acoustic data, building frequentist and Bayesian mixed-effects analyses with explicit contrasts, diagnostics, sensitivity checks, and report-ready outputs.", zh: "把研究生阶段的统计训练应用于重复测量心脏声学数据，建立频率学与贝叶斯混合效应分析，并完成明确对比、模型诊断、敏感性检验及可直接报告的输出。" },
+    tags: [
+      { en: "nlme · MASS", zh: "nlme · MASS" },
+      { en: "brms · Stan", zh: "brms · Stan" },
+      { en: "Mixed-effects models", zh: "混合效应模型" },
+      { en: "Model diagnostics", zh: "模型诊断" },
+      { en: "Power simulation", zh: "功效模拟" },
+    ],
+    metrics: [
+      { value: "936", label: { en: "repeated recording-state observations", zh: "条重复测量记录" } },
+      { value: "3", label: { en: "principal model families", zh: "类主要模型" } },
+      { value: "100", label: { en: "sensitivity simulations", zh: "次敏感性模拟" } },
+    ],
+    aside: { en: "R became the part of the pipeline where design decisions were made explicit: unit of analysis, repeated measures, reference categories, interactions, uncertainty, and whether a model had earned interpretation.", zh: "R 是整个流程中把研究设计决定明确化的环节：分析单位、重复测量、参照组、交互作用、不确定性，以及模型是否真正具备可解释性。" },
+    detail: [
+      { heading: { en: "From taught statistics to a real study", zh: "从课程统计到真实研究" }, body: { en: "Postgraduate training gave me a foundation in R syntax, data structures, data cleaning, visualisation, regression, survival concepts, sample-size reasoning, and clinical-trial statistics. In the acoustic study I moved beyond classroom datasets: readr and dplyr workflows encoded factor levels, joined participant characteristics, standardised BMI, defined outcome eligibility, checked duplicates and missingness, and generated analysis-ready tables without losing provenance.", zh: "研究生课程为我建立了 R 语法、数据结构、清洗、可视化、回归、生存分析概念、样本量思维与临床试验统计基础。在心脏声学研究中，我进一步处理真实数据：用 readr 与 dplyr 设定因子水平、合并受试者特征、标准化 BMI、定义结局可用性、检查重复与缺失，并在不丢失数据来源的前提下生成分析数据表。" } },
+      { heading: { en: "Frequentist mixed-effects models", zh: "频率学混合效应模型" }, body: { en: "I modelled continuous best-channel SNR with a linear mixed-effects model and binary segmentability and SNR-pass outcomes with logistic mixed models. Participant-specific random intercepts accounted for repeated recordings; fixed effects included recording state, chest location, sex, age, standardised BMI, and attempt. I assessed state-by-location interactions, constructed location-specific contrasts, and reported dB differences or odds ratios with confidence intervals rather than relying on isolated p-values.", zh: "我用线性混合效应模型分析连续型最佳通道 SNR，并用 logistic 混合模型分析可分割性与 SNR 达标等二分类结局。受试者随机截距用于处理重复记录；固定效应包括记录阶段、胸部位置、性别、年龄、标准化 BMI 与采集次数。我评估阶段×位置交互作用，构建位置特异的对比，并报告 dB 差值或比值比及其置信区间，而不是只依赖单独的 p 值。" } },
+      { heading: { en: "Diagnostics and assumption checks", zh: "诊断与假设检验" }, body: { en: "For linear models I examined normalised residuals against fitted values and normal Q–Q plots. For binary models I used Pearson residuals and calibration by fitted-probability decile rather than inappropriate normality plots. A separate heart-rate model tested phase effects with participant random intercepts, and a heteroscedastic sensitivity fit using phase-specific residual variances checked whether exercise-related changes depended on the constant-variance assumption.", zh: "在线性模型中，我检查标准化残差—拟合值图与正态 Q–Q 图；对二分类模型则使用 Pearson 残差及按拟合概率十分位分组的校准图，避免套用不合适的正态性诊断。另一个心率模型以受试者随机截距检验不同阶段效应，并通过阶段特异残差方差的异方差敏感性模型，判断运动相关变化是否依赖恒定方差假设。" } },
+      { heading: { en: "Bayesian sensitivity analysis", zh: "贝叶斯敏感性分析" }, body: { en: "Sparse and near-ceiling segmentability cells could create unstable frequentist odds ratios, so I used brms/Stan to fit Bernoulli-logit mixed models with weakly informative regularising priors. I compared additive and state-by-location interaction formulations, derived posterior odds-ratio contrasts, and checked R-hat, bulk and tail effective sample sizes, divergent transitions, maximum tree depth, trace plots, posterior predictive checks, and approximate leave-one-out comparison.", zh: "由于部分可分割性单元格稀疏或接近全数通过，频率学比值比可能不稳定，因此我使用 brms/Stan，以弱信息正则化先验拟合 Bernoulli-logit 混合模型。我比较加性模型与阶段×位置交互模型，计算后验比值比对比，并检查 R-hat、bulk/tail 有效样本量、发散转移、最大树深、轨迹图、后验预测检验及近似留一法比较。" } },
+      { heading: { en: "Simulation and report-ready outputs", zh: "模拟与可报告输出" }, body: { en: "I ran a 100-simulation sensitivity analysis to examine power and minimum detectable effects for the principal outcomes. The final workflow exported tidy coefficient tables, planned contrasts, interaction tests, coverage summaries, calibration and residual figures, posterior summaries, and power curves. Keeping computation, diagnostics, and reporting connected reduced transcription errors and made every thesis number traceable to a defined model and data version.", zh: "我进行了 100 次模拟的敏感性分析，用于考察主要结局的统计功效与最小可检测效应。最终流程输出整洁的系数表、预设对比、交互作用检验、覆盖度汇总、校准与残差图、后验结果及功效曲线。把计算、诊断与报告连接起来，减少了转录错误，也使论文中的每个数值都能追溯到明确的数据版本与模型。" } },
+    ],
+  },
+  {
+    slug: "coding-cpp",
+    section: "coding",
+    year: "2026 — Present",
+    title: { en: "C++ & Arduino", zh: "C++ 与 Arduino" },
+    subtitle: { en: "Embedded-systems foundations", zh: "嵌入式系统基础" },
+    summary: { en: "Developing a practical C++ foundation through Arduino-based prototyping: translating simple control logic into code that can be compiled, uploaded, and tested on physical hardware.", zh: "通过 Arduino 原型开发拓展 C++ 基础，把简单控制逻辑转化为能够编译、烧录并在真实硬件上测试的程序。" },
+    tags: [
+      { en: "C++ fundamentals", zh: "C++ 基础" },
+      { en: "Arduino IDE", zh: "Arduino IDE" },
+      { en: "GPIO · sensors", zh: "GPIO · 传感器" },
+      { en: "Serial debugging", zh: "串口调试" },
+    ],
+    aside: { en: "This is an active skills-development area. I describe it as embedded-systems foundations rather than claiming production-level firmware experience.", zh: "这是仍在持续拓展的能力方向，因此我将其准确表述为嵌入式系统基础，而非成熟的产品级固件开发经验。" },
+    detail: [
+      { heading: { en: "Language foundations", zh: "语言基础" }, body: { en: "I am building familiarity with typed variables, operators, control flow, functions, arrays, basic classes, scope, and the compile–link–run cycle. Moving from interpreted research scripts to C++ has helped me understand how memory, types, timing, and resource constraints shape software behaviour closer to the hardware.", zh: "我正在建立对强类型变量、运算符、流程控制、函数、数组、基础类、作用域以及编译—链接—运行流程的理解。从解释型科研脚本转向 C++，让我开始理解内存、类型、时序和资源限制如何影响更接近硬件的软件行为。" } },
+      { heading: { en: "Arduino prototyping", zh: "Arduino 原型开发" }, body: { en: "Using the Arduino IDE, I can create sketches, select the board and port, compile code, upload firmware, and verify behaviour through the serial monitor. Exercises cover digital and analogue input/output, timing, sensor readings, simple actuator control, and translating a wiring diagram into pin definitions and testable logic.", zh: "我使用 Arduino IDE 编写 sketch、选择开发板与端口、编译程序、烧录固件，并通过串口监视器核验运行结果。练习包括数字与模拟输入输出、定时、传感器读取、简单执行器控制，以及把接线图转化为引脚定义和可测试逻辑。" } },
+      { heading: { en: "Hardware–software debugging", zh: "软硬件联合调试" }, body: { en: "Embedded work makes failure modes tangible: an incorrect pin, baud rate, power connection, library, board selection, or timing assumption can look like a coding error. I am learning to debug systematically by isolating the circuit, checking serial output, testing one component at a time, and distinguishing compile, upload, communication, and hardware faults.", zh: "嵌入式开发让故障模式变得非常具体：错误的引脚、波特率、供电连接、库、开发板选择或时序假设，都可能表现得像代码错误。我正在学习通过隔离电路、检查串口输出、逐个测试组件，系统地区分编译、烧录、通信与硬件故障。" } },
+      { heading: { en: "Direction of development", zh: "后续拓展方向" }, body: { en: "The next step is to connect these foundations to biomedical sensing: stable sensor acquisition, calibration, simple real-time filtering, threshold or state logic, and reliable transfer of measurements to a computer for analysis. The goal is to understand the full route from a physical signal to usable data, not simply to collect another programming language.", zh: "下一步是把这些基础连接到生物医学传感：稳定采集、校准、简单实时滤波、阈值或状态逻辑，以及可靠地把测量结果传输到计算机分析。目标并不是单纯增加一种编程语言，而是理解物理信号如何沿完整链路变成可用数据。" } },
+    ],
+  },
+  {
+    slug: "coding-stata",
+    section: "coding",
+    year: "2023 — 2025",
+    title: { en: "Stata", zh: "Stata" },
+    subtitle: { en: "Medical statistics and clinical data", zh: "医学统计与临床数据" },
+    summary: { en: "Used Stata in undergraduate medical-statistics work to move from raw health data through cleaning, exploratory analysis, probability and hypothesis testing to regression and clinically grounded interpretation.", zh: "在本科医学统计学习中使用 Stata，从原始健康数据出发，完成清洗、探索性分析、概率与假设检验、回归及具有临床背景的结果解释。" },
+    tags: [
+      { en: "t-tests · ANOVA", zh: "t 检验 · ANOVA" },
+      { en: "Probability", zh: "概率" },
+      { en: "Regression", zh: "回归" },
+      { en: "Medical data", zh: "医学数据" },
+    ],
+    aside: { en: "Stata provided my first structured route from a clinical question to a defensible statistical comparison, including the checks needed before interpreting significance.", zh: "Stata 为我建立了最早的一套结构化路径：从临床问题到可辩护的统计比较，并理解在解释显著性之前必须完成哪些检查。" },
+    detail: [
+      { heading: { en: "Data preparation and exploration", zh: "数据准备与探索" }, body: { en: "I imported health datasets, inspected variable types and missing values, recoded groups, labelled variables, and generated derived measures such as BMI from height and weight. Histograms, box plots, summary statistics, skewness, quartiles, and the 1.5-IQR rule were used to understand distributions and identify influential observations before formal testing.", zh: "我导入健康数据，检查变量类型与缺失值，重编码分组、设置变量标签，并由身高和体重计算 BMI 等派生指标。通过直方图、箱线图、描述统计、偏度、四分位数及 1.5 倍 IQR 规则，在正式检验前理解数据分布并识别可能有影响的观测值。" } },
+      { heading: { en: "Probability and statistical inference", zh: "概率与统计推断" }, body: { en: "Coursework covered probability calculations, sampling distributions, standard errors, confidence intervals, null and alternative hypotheses, p-values, and Type I and Type II error. I used these ideas to choose and interpret one-sample, paired, and independent-samples t-tests where appropriate, while checking whether the comparison and assumptions matched the study question.", zh: "课程涵盖概率计算、抽样分布、标准误、置信区间、原假设与备择假设、p 值，以及第一类和第二类错误。我据此在合适情境中选择并解释单样本、配对及独立样本 t 检验，同时核对比较方式和假设是否符合研究问题。" } },
+      { heading: { en: "Group comparisons", zh: "组间比较" }, body: { en: "For questions involving more than two groups, I used analysis of variance followed by appropriate post-hoc comparisons, interpreting the omnibus test before individual pairs. In the medical-data coursework, BMI categories were compared in relation to systolic blood pressure, linking statistical differences back to cardiovascular risk rather than treating significance as the endpoint.", zh: "对于两个以上组别的问题，我使用方差分析并在需要时进行事后比较，先解释整体检验，再查看具体组对。在医学数据作业中，我比较不同 BMI 组的收缩压，并把统计差异重新联系到心血管风险，而不是把显著性本身当作终点。" } },
+      { heading: { en: "Correlation and regression", zh: "相关与回归" }, body: { en: "I examined relationships among BMI, cholesterol, age, waist–hip ratio, and systolic blood pressure using correlations, simple linear regression, and multiple regression. Model comparison used effect estimates, confidence intervals, p-values, R-squared, and residual behaviour; transformations were considered when relationships or assumptions suggested them. This introduced the distinction between association, prediction, confounding, and causal interpretation.", zh: "我通过相关分析、简单线性回归及多元回归，考察 BMI、胆固醇、年龄、腰臀比与收缩压之间的关系。模型比较综合效应估计、置信区间、p 值、R² 与残差表现，并在关系形式或假设提示时考虑变量转换。这也帮助我区分相关、预测、混杂与因果解释。" } },
+      { heading: { en: "Clinical interpretation", zh: "临床解释" }, body: { en: "The work followed a complete analytical arc: derive a variable, inspect its distribution, select a test, check assumptions, estimate uncertainty, and explain what the result can and cannot support. It also exposed the limits of common measures such as BMI and reinforced why multivariable context is often necessary in clinical risk analysis.", zh: "这项学习覆盖了完整分析链条：构建变量、查看分布、选择检验、检查假设、估计不确定性，并说明结果能够与不能支持什么结论。它也揭示了 BMI 等常用指标的局限，并强化了临床风险分析中多变量背景的重要性。" } },
     ],
   },
 ];

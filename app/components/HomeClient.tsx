@@ -37,14 +37,14 @@ export function HomeClient() {
         <div className="hero-bottom">
           <div className="hero-intro">
             <p>{zh ? "记录我在医学科学、临床研究与技术转化中的学习、科研与专业实践。" : "Selected work across medical science, clinical research, and healthcare translation."}</p>
-            <span>{zh ? "教育 · 科研 · 实践 · 论文 · 获奖 · 课外活动" : "Education · Research · Experience · Publications · Awards · Extracurricular"}</span>
+            <span>{zh ? "教育 · 科研 · 实践 · 论文 · 获奖 · 课外活动 · 编程" : "Education · Research · Experience · Publications · Awards · Extracurricular · Coding"}</span>
           </div>
           <a href="#work">{zh ? "浏览作品" : "Explore portfolio"} <span>↓</span></a>
         </div>
       </section>
 
       <section className="work" id="work">
-        <div className="section-heading"><p>{zh ? "作品集目录" : "Portfolio index"}</p><span>01 — 06</span></div>
+        <div className="section-heading"><p>{zh ? "作品集目录" : "Portfolio index"}</p><span>01 — 07</span></div>
         <div className="section-tabs" role="tablist" aria-label={zh ? "作品集分类" : "Portfolio categories"}>
           {sections.map((section, index) => (
             <button role="tab" aria-selected={active === section.id} className={active === section.id ? "section-tab active" : "section-tab"} key={section.id} onClick={() => chooseSection(section.id, false)}>

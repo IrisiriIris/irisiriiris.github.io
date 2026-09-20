@@ -1,10 +1,10 @@
 # Iris Feng — bilingual portfolio
 
-A low-maintenance bilingual academic and professional portfolio. The homepage presents six horizontal categories; selecting one reveals its entries. Every entry has its own shareable detail page.
+A low-maintenance bilingual academic and professional portfolio. The homepage presents seven horizontal categories; selecting one reveals its entries. Every entry has its own shareable detail page.
 
 ## Editing content
 
-All public-facing portfolio records live in `app/content.ts`. To update the site, edit the English and Chinese text in one record. To add a new item, copy an existing record, give it a unique `slug`, and choose one of the six section IDs.
+All public-facing portfolio records live in `app/content.ts`. To update the site, edit the English and Chinese text in one record. To add a new item, copy an existing record, give it a unique `slug`, and choose one of the seven section IDs.
 
 Layout and interaction live in `app/components`; visual styling lives in `app/globals.css`. Images are stored in `public/images` and are referenced by filename from the matching content record.
 
@@ -13,7 +13,7 @@ You do not need to edit HTML for routine updates. On GitHub, open `app/content.t
 ## Navigation model
 
 - English / Chinese switch: remembered on the reader's device and included in shareable URLs.
-- Top navigation: Education, Research, Experience, Publications, Awards, Extracurricular.
+- Top navigation: Education, Research, Experience, Publications, Awards, Extracurricular, Coding.
 - Homepage index: clicking a category reveals its specific items.
 - Detail pages: reusable editorial layout with overview sections and next-item navigation.
 

@@ -21,11 +21,17 @@
   - Extracurricular / 课外活动
     - `/portfolio/piano-performance`
     - `/portfolio/hosting-ceremonies`
+  - Coding / 编程
+    - `/portfolio/coding-python`
+    - `/portfolio/coding-matlab`
+    - `/portfolio/coding-r`
+    - `/portfolio/coding-cpp`
+    - `/portfolio/coding-stata`
 
 ## Component and layout plan
 
 - `SiteHeader`: wordmark, horizontal section navigation, EN/中文 switch.
-- `HomeClient`: introduction, six-part portfolio index, and the active section's item list.
+- `HomeClient`: introduction, seven-part portfolio index, and the active section's item list.
 - `DetailClient`: reusable WordPress-style entry template with breadcrumbs, summary, tags, content sections, and next-entry navigation.
 - `content.ts`: single source of truth for bilingual labels and entries. New items are added here; the homepage and routes use them automatically.
 - `useLanguage`: remembers the reader's choice locally and keeps shareable `?lang=` URLs.

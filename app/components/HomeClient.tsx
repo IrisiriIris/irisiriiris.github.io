@@ -31,7 +31,12 @@ export function HomeClient() {
       <SiteHeader language={language} setLanguage={setLanguage} active={active} onSection={chooseSection} />
       <section className="hero" id="top">
         <div className="hero-main">
-          <p className="eyebrow">{zh ? "冯舒扬 · IRIS FENG" : "IRIS SHUYANG FENG"}</p>
+          <div className="hero-profile">
+            <p className="eyebrow">{zh ? "冯舒扬 · IRIS FENG" : "IRIS SHUYANG FENG"}</p>
+            <a className="hero-linkedin" href="https://www.linkedin.com/in/iris-shuyang-feng" target="_blank" rel="noopener noreferrer" aria-label={zh ? "在新标签页查看 Iris Feng 的领英主页" : "View Iris Feng on LinkedIn (opens in a new tab)"}>
+              {zh ? "领英 LinkedIn" : "LinkedIn"} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
           <h1>Portfolio</h1>
         </div>
         <div className="hero-bottom">

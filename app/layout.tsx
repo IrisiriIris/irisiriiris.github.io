@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = incoming.get("host") ?? "irisiriiris.github.io";
   const protocol = host.includes("localhost") ? "http" : "https";
   const origin = `${protocol}://${host}`;
-  const title = "Iris Feng — Academic Portfolio";
+  const title = "Iris Feng — Portfolio";
   const description = "The bilingual academic and professional portfolio of Iris Feng.";
   return {
     title,

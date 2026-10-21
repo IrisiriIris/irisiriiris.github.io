@@ -16,7 +16,7 @@ function PortfolioApp() {
       ? `${text(entry.title, language)} — Iris Feng`
       : language === "zh"
         ? "Iris Feng — 学术与专业作品集"
-        : "Iris Feng — Academic Portfolio";
+        : "Iris Feng — Portfolio";
   }, [entry]);
 
   return entry ? <DetailClient entry={entry} /> : <HomeClient />;

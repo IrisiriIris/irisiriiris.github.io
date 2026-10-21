@@ -59,9 +59,11 @@ export function DetailClient({ entry }: { entry: PortfolioEntry }) {
             <p>{entry.aside ? text(entry.aside, language) : (zh ? "本页概括项目背景、承担工作、方法与成果。" : "This page summarises the context, contribution, methods, and outcome.")}</p>
             {entry.links && (
               <div className="detail-links">
-                {entry.links.map((link) => (
-                  <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{text(link.label, language)} <span aria-hidden="true">↗</span></a>
-                ))}
+                {entry.links.map((link) => {
+                  const internal = link.href.startsWith("/");
+                  const href = internal ? `${link.href}${link.href.includes("?") ? "&" : "?"}lang=${language}` : link.href;
+                  return <a href={href} key={link.href} target={internal ? undefined : "_blank"} rel={internal ? undefined : "noreferrer"}>{text(link.label, language)} <span aria-hidden="true">{internal ? "→" : "↗"}</span></a>;
+                })}
               </div>
             )}
           </aside>

@@ -113,6 +113,8 @@ footer div p, footer > p { margin: 10px 0 0; color: #aeb7c7; font-size: 12px; }
 .detail-sections section > span { color: var(--accent); font-size: 11px; }
 .detail-sections h2 { margin: -7px 0 20px; font-family: Georgia, serif; font-size: clamp(30px, 4vw, 50px); font-weight: 400; }
 .detail-sections p { max-width: 720px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.detail-module-list { max-width: 720px; margin: 22px 0 0; padding-left: 1.2em; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.detail-module-list li { padding-left: .25em; margin-top: 12px; overflow-wrap: anywhere; }
 .next-entry { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 28px; padding: 50px 7vw; background: var(--accent); color: #fff; }
 .next-entry span { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
 .next-entry strong { font-family: Georgia, serif; font-size: clamp(24px, 3vw, 42px); font-weight: 400; }

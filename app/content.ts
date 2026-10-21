@@ -14,7 +14,7 @@ export type PortfolioEntry = {
   media?: { src: string; alt: LocalizedText; caption: LocalizedText; contain?: boolean; wide?: boolean }[];
   links?: { label: LocalizedText; href: string }[];
   aside?: LocalizedText;
-  detail: { heading: LocalizedText; body: LocalizedText }[];
+  detail: { heading: LocalizedText; body: LocalizedText; items?: LocalizedText[] }[];
 };
 
 export const sections: { id: SectionId; label: LocalizedText; intro: LocalizedText }[] = [
@@ -74,17 +74,64 @@ export const entries: PortfolioEntry[] = [
       { en: "Pharmacology", zh: "药理学" },
       { en: "Clinical Trial Design", zh: "临床试验设计" },
       { en: "Bioinformatics & Genomics", zh: "生物信息与基因组学" },
+      { en: "Biological Rhythms", zh: "生物节律" },
+      { en: "Infection, Inflammation & Repair", zh: "感染、炎症与修复" },
+      { en: "Cell & Molecular Biology", zh: "细胞与分子生物学" },
+      { en: "Musculoskeletal Systems", zh: "肌肉骨骼系统" },
+      { en: "Medical Statistics", zh: "医学统计学" },
+      { en: "Research Methods", zh: "研究方法" },
+      { en: "Healthcare Regulation", zh: "医疗监管" },
+      { en: "Science, Policy & Public Engagement", zh: "科学、政策与公众参与" },
     ],
     metrics: [
       { value: "First", label: { en: "Class Honours", zh: "一等荣誉学位" } },
       { value: "Top 5%", label: { en: "of the programme", zh: "专业排名" } },
-      { value: "41", label: { en: "school pupils mentored", zh: "名中学生获指导" } },
+      { value: "360", label: { en: "UCL credits awarded", zh: "获得 UCL 学分" } },
     ],
     detail: [
-      { heading: { en: "Integrated medical science", zh: "整合医学基础" }, body: { en: "Core study connected cardiovascular and respiratory physiology, liver and drug metabolism, renal and endocrine regulation, infection and inflammation, anatomy and imaging, molecular disease, pharmacology, and cell biology.", zh: "核心课程将心血管与呼吸生理、肝脏与药物代谢、肾脏与内分泌调控、感染与炎症、解剖与影像、疾病分子基础、药理学及细胞生物学贯通起来。" } },
-      { heading: { en: "Selected advanced study", zh: "进阶课程" }, body: { en: "Selected modules included neurological disease, biological rhythms, clinical trials, bioinformatics, advanced bacteriology, mind–brain processes, regulatory affairs, and the relationship between bioscience, public engagement, policy, and funding.", zh: "进阶学习包括神经系统与神经疾病、生物节律、临床试验、生物信息学、高级医学细菌学、心理与脑过程、医疗监管，以及生物科学与公众参与、政策和资助之间的关系。" } },
+      {
+        heading: { en: "Year 1 — Human systems and scientific foundations", zh: "大一 — 人体系统与科学基础" },
+        body: { en: "The first year connected organ-system physiology with anatomy, imaging, cellular biology and the interpretation of scientific evidence. Modules completed in 2022–23:", zh: "第一学年将器官系统生理与解剖、影像、细胞生物学及科学证据解读相结合。2022–23 学年完成课程：" },
+        items: [
+          { en: "MEDC0001 — Foundations in Human Physiology and Cellular Biology", zh: "MEDC0001 — 人体生理学与细胞生物学基础" },
+          { en: "MEDC0002 — Cardiovascular and Respiratory Function in Health and Disease", zh: "MEDC0002 — 健康与疾病中的心血管和呼吸功能" },
+          { en: "MEDC0003 — The Gut, Liver and Drug Metabolism", zh: "MEDC0003 — 胃肠道、肝脏与药物代谢" },
+          { en: "MEDC0004 — Kidneys, Hormones and Fluid Balance", zh: "MEDC0004 — 肾脏、激素与体液平衡" },
+          { en: "MEDC0005 — Infection, Inflammation and Repair", zh: "MEDC0005 — 感染、炎症与修复" },
+          { en: "MEDC0006 — Data Interpretation and Evaluation of Science", zh: "MEDC0006 — 数据解读与科学评价" },
+          { en: "MEDC0008 — Functional Anatomy and Medical Imaging", zh: "MEDC0008 — 功能解剖学与医学影像" },
+          { en: "MEDC0009 — Musculoskeletal Systems in Health and Disease", zh: "MEDC0009 — 健康与疾病中的肌肉骨骼系统" },
+        ],
+      },
+      {
+        heading: { en: "Year 2 — Disease mechanisms and quantitative methods", zh: "大二 — 疾病机制与定量方法" },
+        body: { en: "The second year developed molecular and neurological understanding alongside practical methods, pharmacology, biological rhythms and medical statistics. Modules completed in 2023–24:", zh: "第二学年在分子与神经系统知识基础上，进一步学习实验技术、药理、生物节律及医学统计。2023–24 学年完成课程：" },
+        items: [
+          { en: "MEDC0010 — Molecular Basis of Disease", zh: "MEDC0010 — 疾病的分子基础" },
+          { en: "MEDC0011 — Techniques in Molecular Medicine: A Practical Approach", zh: "MEDC0011 — 分子医学技术：实践方法" },
+          { en: "MEDC0012 — The Nervous System and Neurological Diseases", zh: "MEDC0012 — 神经系统与神经疾病" },
+          { en: "MEDC0013 — Pharmacology and Drug Action", zh: "MEDC0013 — 药理学与药物作用" },
+          { en: "MEDC0014 — Introduction to Clinical Trials", zh: "MEDC0014 — 临床试验导论" },
+          { en: "MEDC0107 — Cell and Molecular Biology", zh: "MEDC0107 — 细胞与分子生物学" },
+          { en: "MEDC0109 — From Clock to Chaos: Biological Rhythms in Biology and Medicine", zh: "MEDC0109 — 从时钟到混沌：生物学与医学中的生物节律" },
+          { en: "STAT0026 — Statistics for Medical Scientists", zh: "STAT0026 — 医学科学统计学" },
+        ],
+      },
+      {
+        heading: { en: "Year 3 — Research, bioinformatics and translation", zh: "大三 — 科研、生物信息学与转化" },
+        body: { en: "The final year brought independent research together with bioinformatics, brain processes, healthcare regulation and the wider relationship between science and society. Modules completed in 2024–25:", zh: "最后一学年将独立研究与生物信息学、脑过程、医疗监管及科学与社会的关系相结合。2024–25 学年完成课程：" },
+        items: [
+          { en: "MEDC0017 — Research Methods From Bench to Bedside", zh: "MEDC0017 — 从实验室到临床的研究方法" },
+          { en: "MEDC0019 — Research Project", zh: "MEDC0019 — 科研项目" },
+          { en: "MEDC0093 — Bioscience and Society: Public Engagement, Policy and Funding", zh: "MEDC0093 — 生物科学与社会：公众参与、政策与资助" },
+          { en: "MEDC0106 — Bioinformatics in Applied Biomedical Science", zh: "MEDC0106 — 应用生物医学中的生物信息学" },
+          { en: "MEDC0108 — Advanced Medical Bacteriology: Challenges and Opportunities", zh: "MEDC0108 — 高级医学细菌学：挑战与机遇" },
+          { en: "MEDC0111 — Where mind meets brain: Psychological and Brain Processes", zh: "MEDC0111 — 心理与脑的交汇：心理及脑过程" },
+          { en: "MEDC0112 — Regulatory Affairs in Healthcare", zh: "MEDC0112 — 医疗监管事务" },
+        ],
+      },
       { heading: { en: "Research preparation", zh: "科研训练" }, body: { en: "Training in scientific evaluation, molecular techniques, medical statistics, and bench-to-bedside research culminated in an independent research project in network physiology and a first-author journal paper.", zh: "通过科学证据评价、分子医学技术、医学统计与从实验室到临床的研究方法训练，最终完成网络生理学独立课题并形成第一作者论文。" } },
-      { heading: { en: "Student ambassador and advisor", zh: "学生大使与学生顾问" }, body: { en: "As a Faculty of Medical Sciences Student Ambassador, I supported prospective students through taster sessions, individual advice on applications and course choices, and cross-cultural communication. I also led a widening-participation group of 41 pupils through the pathophysiology of melanoma; the sessions received a median feedback score of 4/4.", zh: "作为医学科学学院学生大使，我通过体验课、申请与选课的一对一建议及跨文化沟通支持潜在申请者。我还带领 41 名来自教育资源不足背景的中学生学习黑色素瘤病理生理学，活动反馈中位数为 4/4。" } },
+      { heading: { en: "Student ambassador and advisor", zh: "学生大使与学生顾问" }, body: { en: "As a Faculty of Medical Sciences Student Ambassador, I supported prospective students through taster sessions, individual advice on applications and course choices, and cross-cultural communication. Widening-participation teaching and student-advisory roles developed my ability to explain medical science and support students from different backgrounds.", zh: "作为医学科学学院学生大使，我通过体验课、申请与选课的一对一建议及跨文化沟通支持潜在申请者。拓展教育机会的教学活动与学生顾问工作，进一步培养了我讲解医学科学、支持不同背景学生的能力。" } },
       { heading: { en: "Leadership and academic community", zh: "领导力与学术共同体" }, body: { en: "I led a UCL ChangeMakers curriculum project, facilitated small-group tutorials, served as a student advisor within the faculty, chaired programme taster sessions, and performed piano at faculty events. Together, these roles developed facilitation, mentorship, public speaking, and the ability to make complex medical ideas accessible.", zh: "我曾负责 UCL ChangeMakers 课程创新项目、带领小组教程、担任学院学生顾问并主持专业体验活动，也在学院活动中进行钢琴演奏。这些经历共同训练了引导讨论、朋辈支持、公开表达，以及让复杂医学概念更易理解的能力。" } },
       { heading: { en: "How the degree shaped my direction", zh: "专业方向的形成" }, body: { en: "Working between code, physiological traces, and clinical questions taught me to see computation as a language for care rather than an end in itself. My undergraduate SpO₂ project brought systems thinking, entropy, and uncertainty together, and shaped my interest in clinically grounded quantitative physiology.", zh: "在代码、生理信号与临床问题之间工作，让我逐渐把计算视为服务医疗的语言，而非目的本身。本科 SpO₂ 项目把系统思维、熵与不确定性联系起来，也由此形成了我对临床导向定量生理学的兴趣。" } },
     ],
@@ -133,7 +180,6 @@ export const entries: PortfolioEntry[] = [
     aside: { en: "Ongoing computational research training using public datasets. Current outputs are exploratory analyses and documented learning workflows, with developmental mapping and broader model comparisons as subsequent steps.", zh: "基于公开数据的持续计算科研训练。现阶段成果是探索性分析与可追溯的学习流程，发育阶段映射和更全面的模型比较为后续工作。" },
     detail: [
       { heading: { en: "From organoid cultures to developmental questions", zh: "从类器官培养到发育问题" }, body: { en: "Brain organoids provide an experimental model for studying human neural development, but time in culture is not automatically equivalent to an age in the human brain. My recent work asks how expression patterns change across culture duration, which samples support those patterns, and what would be required for a defensible comparison with a human developmental reference. It extends my physiological-data background into molecular and cellular questions relevant to brain–computer-interface research.", zh: "脑类器官为研究人类神经发育提供实验模型，但培养时间并不自动对应人脑的某个年龄。我近期关注表达模式如何随培养时间变化、哪些样本支持这些模式，以及怎样才能与人脑发育参照进行可靠比较。这将此前的生理数据经验延伸到与脑机接口研究相关的分子和细胞问题。" } },
-      { heading: { en: "Auditing the data before interpreting biology", zh: "在生物学解释前核验数据" }, body: { en: "For the Gordon cortical-organoid dataset, I aligned gene-expression profiles with sample metadata and inspected donor, cell-line, culture-day and batch structure. The public author object contains 64 profiles from five lines and four individuals, whereas the paper reports 62 analysed samples and the GEO deposit has a different line-label inventory. I documented these differences rather than forcing an apparently matching cohort. This makes the unit of analysis and provenance explicit before any developmental interpretation.", zh: "针对 Gordon 皮层类器官数据，我将表达矩阵与样本信息对齐，核查供者、细胞系、培养天数和批次结构。公开作者对象含来自五个细胞系、四名个体的 64 个表达谱，而论文报告分析 62 个样本，GEO 存档中的细胞系标签也存在差异。我记录这些差异，避免人为删样本来强行匹配，使分析单位与数据来源在发育解释之前就清楚可查。" } },
       { heading: { en: "Exploring maturation-related expression", zh: "探索与成熟相关的表达变化" }, body: { en: "I implemented library-size CPM, log2 transformation, explicit low-expression filtering and exploratory PCA, then examined progenitor-, neuronal- and astroglial-associated markers across culture days, lines and batches. Plots retain individual profiles and within-line summaries so that sparse age support and uneven sampling remain visible. Marker trajectories are interpreted as descriptive expression patterns: changing cell mixtures, regulation and RNA content can all contribute, so they do not by themselves establish cell proportions or biological age.", zh: "我实现了按文库大小计算 CPM、log2 转换、明确的低表达过滤与探索性 PCA，再按培养天数、细胞系和批次检查祖细胞、神经元及星形胶质相关标志物。图中保留单个表达谱与细胞系内汇总，使年龄支持稀疏和采样不均的问题可见。标志物轨迹是描述性表达模式：细胞构成、细胞内调控与 RNA 含量都可能贡献变化，不能仅据此推断细胞比例或生物学年龄。" } },
       { heading: { en: "Learning single-cell analysis on real counts", zh: "以真实计数数据学习单细胞分析" }, body: { en: "Alongside the organoid work, I completed a Seurat workflow on the public PBMC3k training dataset: per-cell QC, documented filtering, normalisation, variable-feature selection, scaling, PCA, neighbour graphs, clustering and UMAP/t-SNE. The checked run retained 2,638 of 2,700 blood cells and produced nine numerical clusters. I examined marker tables and DotPlot, FeaturePlot and violin views, keeping cell-type assignments provisional. This is a completed single-cell training analysis, distinct from the organoid datasets.", zh: "在类器官分析之外，我用公开 PBMC3k 教学数据完成了 Seurat 流程：逐细胞质控、记录过滤规则、归一化、高变基因筛选、缩放、PCA、邻接图、聚类与 UMAP/t-SNE。核验运行从 2,700 个血细胞中保留 2,638 个，得到九个数字编号簇。我结合 marker 表、DotPlot、FeaturePlot 与小提琴图学习解释，并将细胞类型标注保留为待验证判断。这是已完成的单细胞训练分析，与类器官数据分开。" } },
       { heading: { en: "Testing predictions without leaking the target", zh: "避免信息泄漏的预测练习" }, body: { en: "For a predeclared MAP2 target, I tested linear interpolation by holding out every profile at one internal culture age and comparing predictions with a training-age-mean baseline using MAE and RMSE. Separately, I audited the official BrainSpan metadata: 524 regional profiles from 42 donors, with 36 superior temporal cortex profiles spanning 28 age labels. That audit establishes the reference design; BrainSpan expression analysis and the full developmental mapping remain subsequent steps. The interpolation exercise tests internal age reconstruction, not future forecasting or prediction for a new donor.", zh: "针对预先指定的 MAP2，我每次留出某个内部培养年龄的全部表达谱，用其余年龄做线性插值，再以 MAE、RMSE 与训练年龄均值基线比较。另一路工作核验了 BrainSpan 官方元数据：42 名供者贡献 524 个脑区表达谱，其中颞上回皮层 36 个表达谱覆盖 28 个年龄标签。该核验明确了参照设计，BrainSpan 表达分析与完整发育映射仍待推进。插值练习评估的是内部年龄重建，并非未来预测或新供者泛化。" } },

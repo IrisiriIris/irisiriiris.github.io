@@ -71,7 +71,11 @@ export function DetailClient({ entry }: { entry: PortfolioEntry }) {
             {entry.detail.map((section, i) => (
               <section key={section.heading.en}>
                 <span>0{i + 1}</span>
-                <div><h2>{text(section.heading, language)}</h2><p>{text(section.body, language)}</p></div>
+                <div>
+                  <h2>{text(section.heading, language)}</h2>
+                  <p>{text(section.body, language)}</p>
+                  {section.items && <ul className="detail-module-list">{section.items.map((item) => <li key={item.en}>{text(item, language)}</li>)}</ul>}
+                </div>
               </section>
             ))}
           </div>
